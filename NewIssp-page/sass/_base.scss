@@ -1,0 +1,343 @@
+@charset "UTF-8";
+html, body, div, span, nav, header, iframe,
+h1, h2, h3, h4, h5, h6, p, section, footer,
+a, form, address, big, cite, code,
+del, dfn, em, img, ins, fieldset, q, s, samp,
+small, strike, strong, sub, sup, label, var,
+b, u, i, input, dl, dt, dd, ol, ul, li, figure, figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/*搜索更改时候:点击时候*/
+* ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+$bgColor: #fcf;
+$fontColor: #ffffff;
+$bigNavColor: #202028;
+$bigFontColor: #bfbec9;
+$fontFamily: "Microsoft Himalaya";
+$navFontSize: 12px;
+$navSize: 18px;
+$secTwoBg: #2f3140;
+$secInp: #46485F;
+$secTopColor: #f4f4f6;
+$useColor:#b3aef5;
+$useBg:#636fe7;
+* ::-webkit-scrollbar-thumb {
+  background-color: #c2c2c2;
+  background-clip: padding-box;
+  border: 1px solid #979797;
+  min-height: 28px;
+  border-radius: 3px;
+}
+
+* ::-webkit-scrollbar-thumb:hover {
+  border: 1px solid #636363;
+  background-color: #929292;
+}
+
+html {
+  height: 100%;
+  background-color: #000000;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+}
+
+header {
+  flex: 0 0 auto;
+  height: 100px;
+  font-size: 18px;
+  color: $fontColor;
+  text-align: center;
+  line-height: 100px;
+}
+
+html, body {
+  font-family: $fontFamily;
+  background: #fdfdfd;
+}
+
+form, fieldset {
+  border: 0 none;
+}
+
+ol, ul li {
+  list-style: none;
+}
+
+img {
+  border: 0 none;
+  max-width: 100%;
+}
+
+input, select {
+  outline: none;
+  font-family: $fontFamily;
+}
+
+button {
+  border: 0;
+  font-family: $fontFamily;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+}
+
+i, em {
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*主体结构*/
+section {
+  height: auto;
+  flex: 1 0 auto;
+  color: $fontColor;
+  font-size: 20px;
+  display: flex;
+  //最左边的导航
+  .secOne {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: $bigNavColor;
+    width: 5%;
+    .secOul {
+      text-align: center;
+      padding: 10px;
+      li {
+        font-family: $fontFamily;
+        margin-bottom: 36px;
+        a {
+          display: flex;
+          flex-direction: column;
+          svg {
+            height: 30px;
+            fill: #fff;
+            vertical-align: middle;
+          }
+          //点击导航的时候变色
+          & span {
+            font-size: $navFontSize;
+            color: $bigFontColor;
+          }
+        }
+        /*点击时候改变的样式*/
+        &:nth-of-type(3) {
+          a {
+            svg {
+              fill: #b3aef5;
+            }
+            & span {
+              color: #b3aef5;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  //有搜索的导航
+  .secTwo {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    background-color: $secTwoBg;
+    font-family: $fontFamily;
+    font-size: $navSize;
+    color: #fff;
+    .secOulTwo {
+      padding: 10px 20px;
+      text-align: center;
+      input {
+        border: 0 solid #000;
+        border-radius: 5px;
+        width: 100%;
+        height: 36px;
+        background-color: $secInp;
+      }
+      & li:first-child {
+        border-bottom: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      li {
+        padding: 10px 0;
+        cursor: pointer;
+        border-bottom: 1px solid #aaa;
+        span {
+          margin-left: 15px;
+        }
+        & svg {
+          width: 15%;
+          height: 18px;
+          margin-left: 15%;
+          fill: #ffffff;
+          transform: rotate(-90deg);
+        }
+        /*点击时候改变的样式*/
+        &:nth-of-type(5) svg {
+          transform: rotate(0deg);
+          fill: #b3aef5;
+        }
+        //导航里面点击下拉出现的导航 /*点击时候改变的样式*/
+        .navOul {
+          li {
+            text-align: left;
+            height: 20px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #e6e6e6;
+            border-bottom: none;
+            margin-left: 30%;
+            /*点击时候组织结构管理变色*/
+            &:nth-of-type(2) {
+              color: #b3aef5
+            }
+          }
+        }
+      }
+      & li:first-child svg {
+        width: 15%;
+        height: 25px;
+        margin-top: -1.8rem;
+        margin-left: 80%;
+        fill: #b3aef5;
+        transform: rotate(0deg);
+      }
+    }
+  }
+  //右边主体部分
+  .secThree {
+    display: flex;
+    flex-direction: column;
+    flex: 20;
+    background-color: $secTopColor;
+    .rightTop {
+      height: 100px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: center;
+      .topLeft {
+        h2 {
+          font-family: "DFKai-SB";
+          font-size: 26px;
+          margin-left: 30px;
+          color: #202028;
+          margin-top: 2rem;
+        }
+      }
+      & .topRight {
+        margin-right: -8%;
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 2rem;
+        a {
+          margin-left: -10%;
+          width: 26%;
+          display: flex;
+          flex-direction: row;
+          svg {
+            width: 23%;
+            height: 23px;
+            fill: $secTwoBg;
+          }
+        }
+        //& a:last-child {
+        //  //margin-left: -25px;
+        //}
+        svg {
+          width: 10%;
+          height: 24px;
+          fill: $secTwoBg;
+        }
+        span {
+          font-family: $fontFamily;
+          font-size: 1rem;
+          color: #333333;
+        }
+      }
+    }
+    & .rightNav {
+      height: 4%;
+      background-color: #fff;
+      ul {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: inherit;
+        margin: auto;
+        li {
+          height: 100%;
+          flex: 1;
+          border-right: 2px solid $secTopColor;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          text-align: center;
+          a{
+            font-size: 16px;
+            font-family: $fontFamily;
+            svg {
+              width: 70%;
+              height: 70%;
+              fill: #333333;
+            }
+          }
+          //点击时候改变的样式
+          &:nth-of-type(2){
+            background-color: #636fe7;
+            a {
+              color: #ffffff;
+            }
+          }
+        }
+        & li:last-child {
+          transform: rotate(180deg);
+          flex: 0.5;
+        }
+        & li:first-child {
+          flex: 0.5;
+        }
+      }
+    }
+
+  }
+
+}

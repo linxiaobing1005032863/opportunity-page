@@ -1,0 +1,175 @@
+/*主体添加内容*/
+& .add{
+  font-size:16px;
+  div{
+    background-color: #f4f4f6;
+    width: 90%;
+    margin: 0 auto;
+  }
+  & .addTop{
+    height: 10%;
+    display: flex;
+    margin-bottom: 10px;
+    p{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      padding: 5px;
+      background-color: $useBg;
+      height: 60px;
+      margin:{
+        right: 90px;
+      }
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    span{
+      font-size:14px;
+      color: #000;
+      margin:{
+        top:25px;
+        right: 5px;
+      }
+
+    }
+    & input{
+      width: 350px;
+      height: 35px;
+      margin-top: 17px;
+      padding:{
+        left: 5px;
+      }
+      border:{
+        radius: 5px;
+        width: 1px;
+        color: $useBg;
+        style: solid;
+      }
+    }
+    & a{
+      width: 20px;
+      height: 36px;
+      svg{
+        width: 20px;
+        height: 36px;
+        fill: #999;
+        margin-top: 18px;
+        margin-left: -25px;
+      }
+    }
+
+  }
+  & .addNew{
+    width: 87%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: {
+      left: 114px;
+      top:20px;
+    }
+    .addNewT{
+      width: 55px;
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: $useBg;
+      height: 76px;
+      justify-content: center;
+      align-items: center;
+      border:{
+        top-left-radius: 7px;
+        bottom-left-radius: 7px;
+      }
+      a{
+        display: flex;
+        color: #dddddd;
+        flex-direction: column;
+        em{
+          font-family: "Meiryo", "Microsoft Himalaya";
+          font-size:16px;
+          width: 10px;
+          height: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #ffffff;
+          margin:{
+            left: 7px;
+          }
+          border:{
+            style: solid;
+            width: 1px;
+            color: #dddddd;
+          }
+        }
+        &:nth-of-type(2){
+          border:{
+            top: 1px;
+            style: solid;
+            color: #ffffff;
+          }
+
+          color: #ffffff;
+          em{
+            margin:{
+              top:2px;
+            }
+            border:{
+              radius: 50%;
+            }
+            padding: 1px;
+          }
+        }
+        & span{
+          font-size: 14px;
+        }
+      }
+    }
+    & .addNewC{
+      width: auto;
+      display: flex;
+      margin:{
+        left: 20px;
+      }
+      span{
+        width: 40px;
+        display: flex;
+        margin:{
+          left: 50px;
+          right: 10px;
+        }
+
+        justify-content: center;
+        align-items: center;
+        color: #000;
+      }
+      & input{
+        width: 350px;
+        height: 37px;
+        font-family: "Arial", "Microsoft Himalaya";
+        padding:{
+          left: 10px;
+        }
+        border:{
+          style: solid;
+          width: 1px;
+          color: #c6c6c6;
+        }
+      }
+      & a{
+        width: 20px;
+        height: 36px;
+        svg{
+          width: 20px;
+          height: 36px;
+          fill: #999;
+          margin-top: 2px;
+          margin-left: -25px;
+        }
+      }
+
+    }
+  }
+}
