@@ -1,0 +1,101 @@
+@import "_base";
+@import "organize/_list";
+@import "organize/_centent";
+@import "organize/_add";
+//flex返回的函数数值  试用函数(可以直接数字)
+@function flexNum($n) {
+@return $n;
+}
+/*标签内部内容居中*/
+.centerContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*标签内部内容左对齐*/
+.leftContent{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+/* 主体内容部分*/
+.rightBottom{
+  section{
+    width: 94%;
+    height: 30%;
+    background-color: #ffffff;
+    margin: 2% auto;
+    display: flex;
+    flex-direction: column;
+    /*主体头部导航*/
+    & .contentTitle{
+      ul{
+        //岗位说明书模板内容添加
+        & li{
+          width: 10%;
+          height: 2.5rem;
+          background: #ffffff;
+          margin-right: 3px;
+          border: 1px solid #636fe7;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 4px;
+          font-size:16px;
+        }
+        & .liSty{
+          background-color: #636fe7;
+          a{
+            color: #ffffff;
+          }
+        }
+        //导航的我的岗位
+        .listDiv{
+          font-family: "Arial", "Microsoft Himalaya";
+          color: #000;
+          font-size:16px;
+          line-height: 40px;
+          margin: {
+          left: 20px;
+          }
+          input{
+            width: 200px;
+            height: 38px;
+            border:{
+              style: solid;
+              width: 1px;
+              color: $useBg;
+            }
+            padding: {
+              left: 10px;
+            }
+          }
+           & svg{
+             width: 20px;
+             height: 20px;
+             fill: #999;
+             margin-left: -30px;
+             margin-bottom: -8px;
+          }
+        }
+        display: flex;
+        flex-direction: row;
+        padding: 2%;
+      }
+    }
+    & .add-list{
+      background: #000;
+    }
+    /*    & .edit{
+
+        }*/
+  }
+}
+/*主体添加内容*/
+footer {
+  flex: 0 0 auto;
+  height: 80px;
+  background-color: #ff855a;
+  font-size: 16px;
+  color: $fontColor;
+}
