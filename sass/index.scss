@@ -84,11 +84,147 @@
       }
     }
     & .add-list{
-      background: #000;
-    }
-    /*    & .edit{
+      width:90%;
+      margin: 0 auto;
+      .add-Top{
+        background-color: #f4f4f6;
+        font-size:16px;
+        display: flex;
+        height: 85px;
+        justify-content: flex-start;
+        align-items: center;
+        p{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $useBg;
+          width: 35px;
+          margin:{
+            right: 30px;
+          }
+          padding:{
+            top:18px;
+            bottom: 18px;
+            left: 10px;
+            right: 10px;
+          }
+          border:{
+            bottom-left-radius: 5px;
+            top-left-radius: 5px;
+          }
+        }
+        & span{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #000;
+          margin: {
+            right: 10px;
+          }
+          sup{
+            font-size:30px;
+            color: #f00;
+          }
+        }
+        & input{
+          width: 300px;
+          height: 35px;
+          font-family: "Arial", "Microsoft Himalaya";
+          border:{
+            width: 1px;
+            style: solid;
+            color: $useBg;
+            radius: 5px;
+          }
+          padding:{
+            left: 10px;
+          }
 
-        }*/
+        }
+        margin:{
+          bottom: 20px;
+        }
+        svg{
+          width: 20px;
+          fill:#cccccc;
+          margin:{
+            left: -25px;
+          }
+        }
+      }
+      & .add-kind{
+        ul{
+          li{
+            background-color: #f4f4f6;
+            width:97%;
+            font-size:16px;
+            display: flex;
+            height: 85px;
+            justify-content: flex-start;
+            align-items: center;
+            p{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: $useBg;
+              width: 35px;
+              margin:{
+                right: 30px;
+              }
+              padding:{
+                top:18px;
+                bottom: 18px;
+                left: 10px;
+                right: 10px;
+              }
+              border:{
+                bottom-left-radius: 5px;
+                top-left-radius: 5px;
+              }
+            }
+            & span{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #000;
+              margin: {
+                right: 10px;
+              }
+              sup{
+                font-size:30px;
+                color: #f00;
+              }
+            }
+            & input{
+              width: 300px;
+              height: 35px;
+              font-family: "Arial", "Microsoft Himalaya";
+              border:{
+                width: 1px;
+                style: solid;
+                color: $useBg;
+                radius: 5px;
+              }
+              padding:{
+                left: 10px;
+              }
+
+            }
+            & svg{
+              width: 20px;
+              fill:#cccccc;
+              margin:{
+                left: -25px;
+              }
+            }
+            margin:{
+              left: 43px;
+            }
+          }
+        }
+
+      }
+    }
   }
 }
 /*主体添加内容*/
