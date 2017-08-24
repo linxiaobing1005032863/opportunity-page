@@ -1,0 +1,240 @@
+
+/*主体列表内容*/ //放在
+& .contentCenter{
+  font-size:16px;
+ div{
+   //内容居中
+   width: 96%;
+   margin: 0 auto;
+   //内容表头
+   &.centerTop{
+     background-color: #636fe7;
+     height: 3rem;
+     ul{
+       display: flex;
+       flex-direction: row;
+       width: 35%;
+       & li{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         a{
+           color: #ffffff;
+         }
+         & span{
+           font-size:16px;
+         }
+         & svg {
+           width: 10px;
+           height: 13px;
+           fill: #ffffff;
+           transform: rotate(-90deg);
+         }
+       }
+       & .firstSp{
+         margin: 15px;
+         height: 15px;
+         border-left:2px solid #fff;
+       }
+
+       & .lastSp{
+         width: 50px;
+       }
+     }
+   }
+   //表格内容
+   &.tab{
+     .tabFirst{
+       background-color: #d8daf0;
+       width: 100%;
+       height: 3rem;
+       ul{
+         height: 100%;
+         display: flex;
+         font-family: $fontFamily;
+         color: #000000;
+         .flexA{
+           flex:1;
+         }
+         .flexB{
+           flex:4;
+         }
+         .flexC{
+           flex:8;
+         }
+         .flexD{
+           flex:10;
+         }
+         & li{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex: 1;
+           &:first-child{
+             border-left: 1px solid #c6c6c6;
+           }
+           border:{
+             right: 1px;
+             bottom: 1px;
+             color: #c6c6c6;
+             style: solid;
+           }
+         }
+       }
+     }
+     /*列表表头*/
+     & .tabTwo{
+       width: 100%;
+       ul{
+         height: 100%;
+         display: flex;
+         font-family: $fontFamily;
+         color: #000000;
+         .flexA{
+           flex:1;
+           div{
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             color: #636fe7;
+             input[type=checkbox]{
+               display: block;
+               width: 20px;
+               height: 20px;
+               background-color: #636fe7;
+               color: #636fe7;
+             }
+           }
+         }
+         .flexB{
+           flex:4;
+         }
+         .flexC{
+           flex:8;
+         }
+         .flexD{
+           flex:10;
+         }
+         & li{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex: 1;
+           font-family: 'Arial',$fontFamily,;
+           font-size:16px;
+           &:first-child{
+             border-left: 1px solid #c6c6c6;
+           }
+           border:{
+             right: 1px;
+             bottom: 1px;
+             color: #c6c6c6;
+             style: solid;
+           }
+         }
+       }
+     }
+     /*列表的主体部分*/
+     & .insideBg{
+       background-color: #ebedff;
+       font-size:16px;
+       .insideLi{
+         width: 100%;
+         height: auto;
+         /*移动通信-科目*/
+         .list-small{
+           width: 100% ;
+           height: 100% ;
+           display: flex;
+           flex-direction: column;
+           & li{
+             border-right: 0 none;
+             width: 100%;
+             flex:1;
+             &:first-child{
+               flex: 8.2;
+               border-left: 0 none;
+             }
+             &:last-child{
+               border-bottom: 0 none ;
+             }
+           }
+           & .centerContent{
+             display: flex;
+             justify-content: center;
+             align-items: center;
+           }
+           & .leftContent{
+             display: flex;
+             justify-content: left;
+             align-items: center;
+           }
+         }
+         /*专业分类*/
+         & .lastTwo{
+           li{
+             &:first-child{
+               flex: 2.02;
+               border-left: 0 none;
+             }
+             &:nth-child(2){
+               flex: 6.18;
+               border-left: 0 none;
+             }
+           }
+         }
+         /*最小哪个列表,可以定义行高的*/
+         & .moreSmall{
+           li{
+             font-family: 'Arial',$fontFamily;
+             height: 30px;
+             &:first-child{
+               flex: 1;
+               border-left: 0 none;
+             }
+           }
+         }
+         /*软件-科目-*/
+         & .list-two{
+           & li{
+             width: 100%;
+             &:first-child{
+               flex: 1;
+               border-left: 0 none;
+             }
+             &:last-child{
+               flex:8.3;
+               border-bottom: 0 none ;
+               background-color: #ffffff;
+             }
+           }
+         }
+         /*软件-第二定义列表*/
+         & .list-twoL{
+           li{
+             &:first-child{
+               flex: 1;
+             }
+           }
+         }
+         /*系统集成-科目flex:1*/
+         & .list-default{
+           li{
+             &:first-child{
+               flex: 1;
+             }
+           }
+         }
+       }
+       & .insideBfg{
+         background-color: #ffffff;
+         ol{
+           li:nth-of-type(2n+1){
+             background-color: #f4f4f6;
+           }
+         }
+       }
+     }
+   }
+ }
+}
