@@ -154,16 +154,27 @@
       }
       & .add-kind{
         ul{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #f4f4f6;
+          margin:{
+            left: 35px;
+            bottom: 20px;
+          }
           li{
-            background-color: #f4f4f6;
-            width:97%;
+            margin:{
+              right: 5px;
+            }
+            flex:1;
+            width:95%;
             font-size:16px;
             display: flex;
-            height: 85px;
-            justify-content: flex-start;
+            height: 90px;
             align-items: center;
             p{
               display: flex;
+              flex-direction: column;
               justify-content: center;
               align-items: center;
               background-color: $useBg;
@@ -172,8 +183,8 @@
                 right: 30px;
               }
               padding:{
-                top:18px;
-                bottom: 18px;
+                top:4px;
+                bottom: 2px;
                 left: 10px;
                 right: 10px;
               }
@@ -181,6 +192,34 @@
                 bottom-left-radius: 5px;
                 top-left-radius: 5px;
               }
+             a{
+               text-align: center;
+               span{
+                 color: #ffffff;
+                 width: 35px;
+                 display: inline-block;
+                 margin:{
+                   left: 8px;
+                   top:-5px;
+                 }
+               }
+               &:first-child{
+                 span{
+                   color: #e6e6e6;
+                 }
+                 margin:{
+                   bottom: 5px;
+                 }
+                 & ::after{
+                   content: '';
+                   display: block;
+                   height: 1px;
+                   width: 40px;
+                   background: linear-gradient(left,rgba(255,255,255,0.1),#ffffff,rgba(255,255,255,0.1));
+                 }
+               }
+             }
+
             }
             & span{
               display: flex;
@@ -196,7 +235,7 @@
               }
             }
             & input{
-              width: 300px;
+              width: 280px;
               height: 35px;
               font-family: "Arial", "Microsoft Himalaya";
               border:{
@@ -217,9 +256,7 @@
                 left: -25px;
               }
             }
-            margin:{
-              left: 43px;
-            }
+
           }
         }
 
@@ -228,7 +265,7 @@
   }
 }
 /*主体添加内容*/
-footer {
+footer{
   flex: 0 0 auto;
   height: 80px;
   background-color: #ff855a;
