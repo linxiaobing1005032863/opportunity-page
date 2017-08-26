@@ -351,3 +351,143 @@ footer{
   font-size: 16px;
   color: $fontColor;
 }
+@media screen and (min-width:600px) and (max-width:1000px){
+  section{
+    .secThree {
+      .rightNav {
+        ul {
+          li {
+            a{
+              font-size:13px;
+            }
+          }
+        }
+      }
+    }
+    & .secOne{
+      width: 50px;
+    }
+    & .secTwo{
+      font-size:16px;
+    }
+  }
+  .rightBottom{
+    section{
+      .contentTitle{
+        ul{
+          li{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .contentCenter{
+    div.tab{
+        .tabFirst{
+          ul {
+            font-size:13px;
+            .flexA{
+              flex: 1.35;
+            }
+          }
+        }
+        .tabTwo{
+          ul{
+            li{
+              font-size: 13px;
+            }
+        }
+      }
+    }
+  }
+}
+
+@media screen  and (max-width:800px){
+  section{
+    & .secOne{
+      width: 50px;
+    }
+    & .secTwo{
+      font-size:16px;
+    }
+  }
+}
+@media screen and (min-width:600px) and (max-width:1366px){
+  .contentCenter{
+    div.centerTop{
+        ul{
+          li{
+            a{
+              width: 70px;
+            }
+            &:nth-of-type(4){
+              a{
+                width: 100px;
+              }
+            }
+            & span{
+              font-size:14px;
+            }
+            & svg{
+              height: 10px;
+            }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 1000px)and (max-width:1600px){
+  section {
+    .secThree {
+      .rightNav {
+        ul {
+          li {
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width:1366px) and (max-width:1600px){
+  .contentCenter{
+    div.centerTop{
+      ul{
+        li{
+          a{
+            width: 74px;
+          }
+          &:nth-of-type(4){
+            a{
+              width: 103px;
+            }
+          }
+          & span{
+            font-size:15px;
+          }
+          & svg{
+            height: 10px;
+          }
+        }
+      }
+    }
+  }
+  section {
+    .secThree {
+      .rightNav {
+        ul {
+          li {
+            a {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
