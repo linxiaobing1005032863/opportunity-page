@@ -16,7 +16,6 @@ b, u, i, input, dl, dt, dd, ol, ul, li, figure, figcaption {
   width: 6px;
   height: 6px;
 }
-
 $bgColor: #fcf;
 $fontColor: #ffffff;
 $bigNavColor: #202028;
@@ -155,14 +154,14 @@ section {
           }
         }
         /*点击时候改变的样式*/
-        &:nth-of-type(3) {
-          a {
-            svg {
-              fill: #b3aef5;
-            }
-            & span {
-              color: #b3aef5;
-            }
+      }
+      & .change-svg{
+        a {
+          svg {
+            fill: #b3aef5;
+          }
+          & span {
+            color: #b3aef5;
           }
         }
       }
@@ -216,11 +215,6 @@ section {
           fill: #ffffff;
           transform: rotate(-90deg);
         }
-        /*点击时候改变的样式*/
-        &:nth-of-type(5) svg {
-          transform: rotate(0deg);
-          fill: #b3aef5;
-        }
         //导航里面点击下拉出现的导航 /*点击时候改变的样式*/
         .navOul {
           li {
@@ -237,6 +231,11 @@ section {
             }
           }
         }
+      }
+      /*点击时候改变的样式*/
+      .nav-change svg {
+        transform: rotate(0deg);
+        fill: #b3aef5;
       }
       & li:first-child svg {
         width: 15%;
