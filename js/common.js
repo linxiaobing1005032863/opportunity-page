@@ -5,5 +5,4 @@ window.onload=function(){
         document.body.insertAdjacentHTML("afterBegin", '<div style="display:none;">' + ajax.responseText + '</div>');
     }
     ajax.send();
-}
-
+};
