@@ -246,55 +246,293 @@
                             <li><a href="javascript:void (0)">重启</a></li>
                         </ul>
                     </div>
-                    <!--表格添加样式-->
-                    <div class="add-list">
-                        <div class="add-Top">
-                            <p>信息设置</p>
-                            <span><sup>*</sup>方向:</span>
-                            <input type="text">
-                            <svg role="img" class="down">
-                                <use xlink:href="#down"></use>
-                            </svg>
-                        </div>
-                        <div class="add-kind">
+                    <!--表格列表内容-->
+                    <div class="contentCenter">
+                        <!--表格表头-->
+                        <div class="centerTop">
                             <ul>
+                                <li class="firstSp"><span></span></li>
                                 <li>
-                                    <p class="del-add">
-                                        <a href="javascript:void(0)">
-                                            <img src="/images/minus.png" alt="">
-                                            <span>删除</span>
-                                        </a>
-                                        <a href="javascript:void(0)">
-                                            <img src="/images/add.png" alt="">
-                                            <span>添加</span>
-                                        </a>
-                                    </p>
-                                    <span><sup>*</sup>科目:</span>
-                                    <input type="text">
-                                    <svg role="img" class="down">
-                                        <use xlink:href="#down"></use>
-                                    </svg>
+                                    <a href="javascript:void(0)">
+                                        <span>知己知彼</span>
+                                        <svg role="img" class="down">
+                                            <use xlink:href="#down"></use>
+                                        </svg>
+                                    </a>
                                 </li>
                                 <li>
-                                    <span><sup>*</sup>科目:</span>
-                                    <input type="text">
-                                    <svg role="img" class="down">
-                                        <use xlink:href="#down"></use>
-                                    </svg>
+                                    <a href="javascript:void(0)">
+                                        <span>组织结构</span>
+                                        <svg role="img" class="down">
+                                            <use xlink:href="#down"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span>组织结构管理</span>
+                                        <svg role="img" class="down">
+                                            <use xlink:href="#down"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <span>体系设置</span>
+                                        <svg role="img" class="down">
+                                            <use xlink:href="#down"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="lastSp">
+                                    <a href="javascript:void(0)">
+                                        <span>列表</span>
+                                    </a>
                                 </li>
                             </ul>
-                            <div class="add-down">
-                                <a href="javascript:void(0)">
-                                    <svg role="img" class="left">
-                                            <use xlink:href="#left"></use>
-                                    </svg>
-                                    <span>点击查看相关添加</span>
-                                </a>
+                        </div>
+                        <div class="tab">
+                            <div class="tabFirst">
+                                <ul>
+                                    <li class="flexA"></li>
+                                    <li class="flexB">业务方向分类</li>
+                                    <li class="flexD">业务方向-科目</li>
+                                    <li class="flexC">专业分类</li>
+                                    <li class="flexC">工作范围</li>
+                                    <li class="flexC">工作界面(节点)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <div class="tabTwo insideBg">
+                                <ul>
+                                    <li class="flexA"><div><input type="checkbox"></div></li>
+                                    <li class="flexB">移动通信</li>
+                                    <li class="flexD insideLi">
+                                        <ol class="list-small">
+                                            <li>1.1工程督导</li>
+                                            <li class="leftContent">1.2工程网优</li>
+                                            <li class="leftContent">1.3工程设计、规划</li>
+                                            <li class="leftContent">1.4工程监理</li>
+                                            <li class="leftContent">1.5优化专项</li>
+                                            <li class="leftContent">1.6工程、网优日常代维</li>
+                                        </ol>
+                                    </li>
+                                    <li class="flexC insideLi" >
+                                        <ol class="list-small lastTwo">
+                                            <li>无线</li>
+                                            <li>有线</li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ol>
+                                    </li>
+                                    <li class="flexC insideLi">
+                                        <ol class="list-small moreSmall">
+                                            <li>无线前台</li>
+                                            <li>无线后台</li>
+                                            <li>电信IPRAN</li>
+                                            <li>电信数通/PON后台</li>
+                                            <li>电信数通/PON前台</li>
+                                            <li>OTN前/后台</li>
+                                            <li>SDH前/后台</li>
+                                            <li>IPRAN</li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ol>
+                                    </li>
+                                    <li class="flexC insideLi">
+                                        <ol class="list-small moreSmall">
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <div class="tabTwo insideBg">
+                                <ul class="insideBfg">
+                                    <li class="flexA"><div><input type="checkbox"></div></li>
+                                    <li class="flexB">软件</li>
+                                    <li class="flexD insideLi">
+                                        <ol class="list-small list-two">
+                                            <li class="leftContent">2.1J项目实施类VE</li>
+                                            <li class="leftContent">2.2项目实施类PP</li>
+                                            <li class="leftContent">2.3大数据、云处理</li>
+                                            <li class="leftContent">2.4监理</li>
+                                            <li>2.5软件开发与测试</li>
+                                        </ol>
+                                    </li>
+                                    <li class="flexC insideLi" >
+                                        <ol class="list-small moreSmall">
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ol>
+                                    </li>
+                                    <li class="flexC insideLi">
+                                        <ol class="list-small list-twoL">
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li>前端开发</li>
+                                            <li>UI设计</li>
+                                            <li>数据分析</li>
+                                            <li>软件开发工程师</li>
+                                            <li>PHP工程师</li>
+                                            <li>核心网工程师</li>
+                                            <li>嵌入式工程师</li>
+                                            <li>数据通信工程师</li>
+                                        </ol>
+                                    </li>
+                                    <li class="flexC insideLi">
+                                        <ol class="list-small moreSmall">
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <div class="tabTwo insideBg">
+                                <ul class="insideBfg">
+                                    <li class="flexA"><div><input type="checkbox"></div></li>
+                                    <li class="flexB">系统集成</li>
+                                    <li class="flexD insideLi">
+                                        <ol class="list-small list-default">
+                                            <li class="leftContent">3.1智能楼宇、智能小区</li>
+                                            <li class="leftContent">3.2物联网</li>
+                                            <li class="leftContent">3.3物业管理</li>
+                                            <li class="leftContent">3.4局域网</li>
+                                            <li class="leftContent">3.5入网行为管理</li>
+                                            <li class="leftContent">3.6监理</li>
+                                        </ol>
+                                    </li>
+                                    <li class="flexC insideLi" >
+                                        <ol class="list-small moreSmall">
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ol>
+                                    </li>
+                                    <li class="flexC insideLi">
+                                        <ol class="list-small list-twoL">
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ol>
+                                    </li>
+                                    <li class="flexC insideLi">
+                                        <ol class="list-small moreSmall">
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <div class="tabTwo insideBg">
+                                <ul class="insideBfg">
+                                    <li class="flexA"><div><input type="checkbox"></div></li>
+                                    <li class="flexB">广告营销、活动策划</li>
+                                    <li class="flexD insideLi">
+                                        <ol class="list-small list-default">
+                                            <li class="leftContent">4.1单一方案提供</li>
+                                            <li class="leftContent">4.2整体实施</li>
+                                            <li></li>
+                                        </ol>
+                                    </li>
+                                    <li class="flexC insideLi" >
+                                        <ol class="list-small moreSmall">
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ol>
+                                    </li>
+                                    <li class="flexC insideLi">
+                                        <ol class="list-small list-twoL">
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ol>
+                                    </li>
+                                    <li class="flexC insideLi">
+                                        <ol class="list-small moreSmall">
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ol>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
+            <!--删除-->
+            <div class="delete" style="display: none">
+                <div class="del-head">
+            <span>
+                <img src="/images/del.png">
+            </span>
+                    <h3>温馨提示</h3>
+                    <p>您确定要删除此数据吗？</p>
+                </div>
+                <div class="del-btn">
+                    <button>取消</button>
+                    <button>确定</button>
+                </div>
+            </div>
+            <div id="maskBg" style="display: none"></div>
         </div>
     </section>
   <script src="/js/common.js"></script>
