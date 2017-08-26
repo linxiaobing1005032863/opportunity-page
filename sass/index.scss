@@ -375,6 +375,22 @@ footer{
   font-size: 16px;
   color: $fontColor;
 }
+/*添加编辑样式媒体查询*/
+@media screen  and (max-width:1700px){
+  .editContent{
+    .list-editT {
+      ul {
+        li:last-child{
+          span{
+            width: 26%;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+/*列表样式的媒体查询*/
 @media screen and (min-width:600px) and (max-width:1000px){
   section{
     .secThree {
@@ -425,7 +441,20 @@ footer{
       }
     }
   }
+  .editContent{
+    .list-editT {
+      ul {
+        li{
+          span{
+            width: 32%;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
 }
+/*列表样式的内容导航的媒体查询*/
 @media screen  and (max-width:800px){
   section{
     & .secOne{
@@ -464,6 +493,7 @@ footer{
     }
   }
 }
+/*列表样式的表头字体的媒体查询*/
 @media screen and (min-width:600px) and (max-width:1366px){
   .contentCenter{
     div.centerTop{
@@ -488,6 +518,7 @@ footer{
     }
   }
 }
+/*列表样式的内容导航字体的媒体查询*/
 @media screen and(min-width: 1000px)and (max-width:1600px){
   section {
     .secThree {
@@ -503,6 +534,7 @@ footer{
     }
   }
 }
+/*列表样式的表头字体的媒体查询*/
 @media screen and (min-width:1366px) and (max-width:1600px){
   .contentCenter{
     div.centerTop{
@@ -540,6 +572,7 @@ footer{
     }
   }
 }
+/*列表样式的输入框的媒体查询*/
 @media screen  and (max-width:1600px){
   .rightBottom{
     section{
@@ -559,6 +592,7 @@ footer{
     }
   }
 }
+/*列表样式的ul和输入框的媒体查询*/
 @media screen  and (min-width:800px) and (max-width:1222px){
   .rightBottom {
     section{
@@ -589,4 +623,5 @@ footer{
     }
   }
 }
+
 
