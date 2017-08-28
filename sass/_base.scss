@@ -15,11 +15,10 @@ b, u, i, input, dl, dt, dd, ol, ul, li, figure, figcaption {
   width: 6px;
   height: 6px;
 }
-$bgColor: #fcf;
 $fontColor: #ffffff;
 $bigNavColor: #202028;
 $bigFontColor: #bfbec9;
-$fontFamily: "Microsoft Himalaya";
+$fontFamily: "Arial","Microsoft Himalaya";
 $navFontSize: 12px;
 $navSize: 18px;
 $secTwoBg: #2f3140;
@@ -345,9 +344,8 @@ section {
 
   }
 
-
 }
-
+/*删除弹出的框*/
 .delete{
   width: 533px;
   height: 202px;
@@ -418,3 +416,4 @@ section {
   z-index: 100;
   background: rgba(255, 255, 255, 0.3);
 }
+
