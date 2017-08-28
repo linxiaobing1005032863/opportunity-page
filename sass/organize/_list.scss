@@ -1,3 +1,4 @@
+@import "../base";
 & .contentCenter{
   font-size:16px;
  div{
@@ -96,12 +97,12 @@
              align-items: center;
              color: #636fe7;
              input[type=checkbox]{
-               display: block;
-               width: 20px;
-               height: 20px;
-               background-color: #636fe7;
-               color: #636fe7;
-             }
+                 display: block;
+                 width: 20px;
+                 height: 20px;
+                 background-color: #636fe7;
+                 color: #636fe7;
+               }
            }
          }
          .flexB{
@@ -235,4 +236,139 @@
      }
    }
  }
+}
+
+/*列表的样式*/
+.secThree{
+  .rightBottom{
+    .contentCenter{
+      .list-content{
+        .list-cenOul{
+          //列表表头
+          .list-top{
+            display: flex;
+            height: 40px;
+            font-size:16px;
+            font-weight: bold;
+            span{
+              color: #000;
+              flex:1;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border:{
+                width: 1px;
+                left: 0;
+                color: #cccccc;
+                style: solid;
+              }
+              &:first-child{
+                border:{
+                  left: 1px;
+                  color: #cccccc;
+                  style: solid;
+                }
+              }
+              &.flexA{
+                flex: 1;
+              }
+              &.flexB{
+                flex: 4;
+              }
+              &.flexC{
+                flex: 8;
+              }
+              &.flexD{
+                flex: 10;
+              }
+            }
+          }
+          & .list-style{
+            display: flex;
+            //点击时候变色
+            //background-color: #ebebff;
+            span{
+              color: #000;
+              flex:1;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border:{
+                width: 1px;
+                top:0;
+                left: 0;
+                color: #c6c6c6;
+                style: solid;
+              }
+              &:first-child{
+                border:{
+                  left: 1px;
+                  color: #c6c6c6;
+                  style: solid;
+                }
+              }
+              &.flex1{
+                flex: 1;
+              }
+              &.flex4{
+                flex: 4;
+              }
+              &.flex8{
+                flex: 8;
+              }
+              &.flex10{
+                flex: 10;
+              }
+              .list-oul{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                li{
+                  font-family: "Arial", "Microsoft Himalaya";
+                  height: 30px;
+                  border:{
+                    bottom: 1px;
+                    style: solid;
+                    color: #c6c6c6;
+                  }
+                  display: flex;
+                  align-items: center;
+                  flex: 1;
+                  &.flex8{
+                    flex: 8;
+                  }
+                  &.flex6{
+                    flex: 6;
+                  }
+                  &.flex2{
+                    flex: 2;
+                  }
+                  &:last-child{
+                    border: {
+                      bottom: 0;
+                    }
+                  }
+                  &:nth-of-type(2n+1){
+                    background-color: #f7f7fa;
+                  }
+                  &.text-center{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #ffffff;
+                  }
+                  &.text-left{
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

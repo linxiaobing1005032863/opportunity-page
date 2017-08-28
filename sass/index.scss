@@ -3,6 +3,7 @@
 @import "organize/_centent";
 @import "organize/_add";
 @import "organize/edit";
+@import "organize/newList";
 //flex返回的函数数值  试用函数(可以直接数字)
 @function flexNum($n) {
 @return $n;
@@ -621,6 +622,32 @@ footer{
         width: 80%;
       }
     }
+  }
+}
+//列表样式查询
+@media screen and (max-width: 1200px) {
+  .secThree {
+    .rightBottom {
+      .contentCenter {
+        .list-content {
+          .list-cenOul {
+            .list-style {
+              span {
+                font-size:13px;
+                .list-oul{
+                  li{
+                    font-size:13px;
+                  }
+                }
+              }
+            }
+            & .list-top{
+              font-size:13px;
+            }
+          }
+        }
+      }
+  }
   }
 }
 
