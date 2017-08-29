@@ -398,8 +398,6 @@ section {
                 }
                 & .list-style{
                   display: flex;
-                  //点击时候变色
-                  //background-color: #ebebff;
                   span{
                     color: #000;
                     flex:1;
@@ -419,11 +417,35 @@ section {
                         color: #c6c6c6;
                         style: solid;
                       }
-                      input[type=checkbox]{
-                        display: block;
+                      .checked-none[data-style="checked"]{
+                        display: none;
+                      }
+                      .checked-none[data-style="checked"] + label {
+                        display: inline-block;
                         width: 20px;
                         height: 20px;
+                        box-shadow:inset 0 0 2px white;
+                        overflow: hidden;
                       }
+                      .checked-none[data-style="checked"]:checked + label{
+                        background: url("/images/right.png") #ffffff no-repeat center;
+                      }
+                      .checkedNum[data-style="checkeds"] + label:before{
+                        width: 13px;
+                        height: 10px;
+                        background: url("/images/right.png") #ffffff no-repeat center;
+                        text-align: center;
+                        -webkit-transition: all 0.2s linear;
+                        transition: all 0.2s linear;
+                      }
+                      .tick{
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 2px;
+                        border: 1px solid #ebebeb;
+                      }
+
                     }
                     &.flex1{
                       flex: 1;
@@ -1174,7 +1196,6 @@ section {
     }
   }
 }
-
 /*列表样式的表头字体的媒体查询*/
 @media screen and (min-width:1366px) and (max-width:1600px){
   .contentCenter{
@@ -1213,7 +1234,6 @@ section {
     }
   }
 }
-
 /*列表样式的输入框的媒体查询*/
 @media screen and (min-width:1300px) and (max-width:1600px){
   section{
@@ -1221,7 +1241,7 @@ section {
       .rightBottom {
         section {
           .contentCenter {
-            div.add {
+            div.add,div.edit {
               .add-kind {
                 .add-cls {
                   ul {
@@ -1247,7 +1267,7 @@ section {
       .rightBottom {
         section {
           .contentCenter {
-            div.add {
+            div.add, div.edit{
               .add-kind {
                 .add-cls {
                   ul {

@@ -25,3 +25,10 @@ $('.contentTitle>ul>li').on('click',function () {
     var listTitle = $(this).attr("data-title");
     $(this).parents('section').find('.'+listTitle).show().siblings().hide();
 });
+
+
+/*点击勾选*/
+$(".checked-none").each(function(i){
+    $(this).attr({"id":"checked"+i});
+    $(this).next("label").attr("for","checked"+i);
+});
