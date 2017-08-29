@@ -244,7 +244,7 @@ section {
     }
     /* 主体内容列表部分*/
     & .rightBottom{
-      section{
+      .oneSec{
         width: 94%;
         height: 30%;
         background-color: #ffffff;
@@ -398,7 +398,8 @@ section {
                 }
                 & .list-style{
                   display: flex;
-                  span{
+                  section,span{
+                    font-size:16px;
                     color: #000;
                     flex:1;
                     display: flex;
@@ -445,7 +446,6 @@ section {
                         border-radius: 2px;
                         border: 1px solid #ebebeb;
                       }
-
                     }
                     &.flex1{
                       flex: 1;
@@ -1176,7 +1176,7 @@ section {
             div.list-content {
               .list-cenOul {
                 .list-style {
-                  span {
+                 section {
                     font-size:13px;
                     .list-oul{
                       li{
