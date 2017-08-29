@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>首页开启</title>
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/index.css"  charset=”utf-8″>
 </head>
 <body>
     <section>
@@ -146,18 +146,30 @@
                     <svg role="img" class="down">
                         <use xlink:href="#down"></use>
                     </svg>
+                    <ul class="navOul">
+                        <li>组织结构</li>
+                        <li>组织结构管理</li>
+                    </ul>
                 </li>
                 <li>
                     <span>简介管理</span>
                     <svg role="img" class="down">
                         <use xlink:href="#down"></use>
                     </svg>
+                    <ul class="navOul">
+                        <li>组织结构</li>
+                        <li>组织结构管理</li>
+                    </ul>
                 </li>
                 <li>
                     <span>企业文化</span>
                     <svg role="img" class="down">
                         <use xlink:href="#down"></use>
                     </svg>
+                    <ul class="navOul">
+                        <li>组织结构</li>
+                        <li>组织结构管理</li>
+                    </ul>
                 </li>
                 <li>
                     <span>组织结构</span>
@@ -174,6 +186,10 @@
                     <svg role="img" class="down">
                         <use xlink:href="#down"></use>
                     </svg>
+                    <ul class="navOul">
+                        <li>组织结构</li>
+                        <li>组织结构管理</li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -204,12 +220,13 @@
             <!--主体导航部分-->
             <div class="rightNav">
                 <ul>
-                    <li><a href="javascript:void(0)">
+                    <li class="disable"><a href="javascript:void(0)">
                         <svg role="img" class="left">
                             <use xlink:href="#left"></use>
                         </svg>
-                    </a></li>
-                    <li><a href="javascript:void(0)">体系设置</a></li>
+                    </a>
+                    </li>
+                    <li class="active"><a href="javascript:void(0)">体系设置</a></li>
                     <li><a href="javascript:void(0)">部门设置</a></li>
                     <li><a href="javascript:void(0)">岗位层级设置</a></li>
                     <li><a href="javascript:void(0)">编号设计信息</a></li>
@@ -220,7 +237,7 @@
                     <li><a href="javascript:void(0)">岗位说明书模板</a></li>
                     <li><a href="javascript:void(0)">岗位工作明细表</a></li>
                     <li><a href="javascript:void(0)">组织构成</a></li>
-                    <li>
+                    <li class="disable">
                         <a href="javascript:void(0)">
                         <svg role="img" class="left">
                             <use xlink:href="#left"></use>
@@ -230,287 +247,654 @@
                 </ul>
             </div>
             <!--主体内容部分-->
-            <!--列表-->
             <div class="rightBottom">
                 <section>
                     <!--内容表头导航-->
                     <div class="contentTitle">
                         <ul>
-                            <li class="liSty"><a href="javascript:void (0)">列表</a></li>
-                            <li><a href="javascript:void (0)">添加</a></li>
-                            <li><a href="javascript:void (0)">编辑</a></li>
-                            <li><a href="javascript:void (0)">删除</a></li>
-                            <li><a href="javascript:void (0)">关闭</a></li>
-                            <li><a href="javascript:void (0)">重启</a></li>
+                            <li class="liSty" data-title="list-content"><a href="javascript:void (0)">列表</a></li>
+                            <li data-title="add"><a href="javascript:void (0)">添加</a></li>
+                            <li data-title="edit"><a href="javascript:void (0)">编辑</a></li>
+                            <li data-title="delete"><a href="javascript:void (0)">删除</a></li>
+                            <li data-title="close"><a href="javascript:void (0)">关闭</a></li>
+                            <li data-title="reset"><a href="javascript:void (0)">重启</a></li>
                         </ul>
                     </div>
-                    <!--表格列表内容-->
+                    <!--表格内容-->
                     <div class="contentCenter">
-                        <!--表格表头-->
-                        <div class="centerTop">
-                            <ul>
-                                <li class="firstSp"><span></span></li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <span>知己知彼</span>
-                                        <svg role="img" class="down">
-                                            <use xlink:href="#down"></use>
-                                        </svg>
-                                    </a>
+                        <!--列表-->
+                        <div class="list-content">
+                            <!--表格表头-->
+                            <div class="centerTop">
+                                <ul>
+                                    <li class="firstSp"><span></span></li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>知己知彼</span>
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>组织结构</span>
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>组织结构管理</span>
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <span>体系设置</span>
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="lastSp">
+                                        <a href="javascript:void(0)">
+                                            <span>列表</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="list-cenOul">
+                                <li class="list-top">
+                                    <span class="flex1"> <input type="checkbox"></span>
+                                    <span class="flex4">业务方向分类</span>
+                                    <span class="flex10">业务方向-科目</span>
+                                    <span class="flex8">专业分类</span>
+                                    <span class="flex8">工作范围</span>
+                                    <span class="flex8">工作界面(节点)</span>
                                 </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <span>组织结构</span>
-                                        <svg role="img" class="down">
-                                            <use xlink:href="#down"></use>
-                                        </svg>
-                                    </a>
+                                <li class="list-style">
+                                    <span class="flex1">
+                                        <input type="checkbox" checked="checked" class="checked-none" data-style="checked">
+                                        <label class="tick"></label>
+                                    </span>
+                                    <span class="flex4">移动通信</span>
+                                    <span class="flex10">
+                                         <ol class="list-oul">
+                                            <li class="flex8 text-center">1.1工程督导</li>
+                                            <li>1.2工程网优、规划</li>
+                                            <li>1.3工程设计</li>
+                                            <li>1.4工程监理</li>
+                                            <li>1.5优化专项</li>
+                                            <li>1.6工程、网优日常代维</li>
+                                        </ol>
+                                    </span>
+                                    <span class="flex8">
+                                        <ol  class="list-oul">
+                                            <li class="flex2 text-center">无线</li>
+                                            <li class="flex6 text-center">有线</li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ol>
+                                    </span>
+                                    <span class="flex8">
+                                         <ol class="list-oul">
+                                             <li>无线前台</li>
+                                             <li>无线后台</li>
+                                             <li>电信IPRAN</li>
+                                             <li>电信数通/PON后台</li>
+                                             <li>电信数通/PON前台</li>
+                                             <li>OTN前/后台</li>
+                                             <li>SDH前/后台</li>
+                                             <li>OPRAN</li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                        </ol>
+                                    </span>
+                                    <span class="flex8">
+                                          <ol  class="list-oul">
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                        </ol>
+                                    </span>
                                 </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <span>组织结构管理</span>
-                                        <svg role="img" class="down">
-                                            <use xlink:href="#down"></use>
-                                        </svg>
-                                    </a>
+                                <li class="list-style">
+                                    <span class="flex1">
+                                        <input type="checkbox" checked="checked" class="checked-none" data-style="checked">
+                                        <label class="tick"></label>
+                                    </span>
+                                    <span class="flex4">移动通信</span>
+                                    <span class="flex10">
+                                         <ol class="list-oul">
+                                            <li class="flex8 text-center">1.1工程督导</li>
+                                            <li>1.2工程网优、规划</li>
+                                            <li>1.3工程设计</li>
+                                            <li>1.4工程监理</li>
+                                            <li>1.5优化专项</li>
+                                            <li>1.6工程、网优日常代维</li>
+                                        </ol>
+                                    </span>
+                                    <span class="flex8">
+                                        <ol  class="list-oul">
+                                            <li class="flex2 text-center">无线</li>
+                                            <li class="flex6 text-center">有线</li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ol>
+                                    </span>
+                                    <span class="flex8">
+                                         <ol class="list-oul">
+                                             <li>无线前台</li>
+                                             <li>无线后台</li>
+                                             <li>电信IPRAN</li>
+                                             <li>电信数通/PON后台</li>
+                                             <li>电信数通/PON前台</li>
+                                             <li>OTN前/后台</li>
+                                             <li>SDH前/后台</li>
+                                             <li>OPRAN</li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                        </ol>
+                                    </span>
+                                    <span class="flex8">
+                                          <ol  class="list-oul">
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                        </ol>
+                                    </span>
                                 </li>
-                                <li>
-                                    <a href="javascript:void(0)">
-                                        <span>体系设置</span>
-                                        <svg role="img" class="down">
-                                            <use xlink:href="#down"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li class="lastSp">
-                                    <a href="javascript:void(0)">
-                                        <span>列表</span>
-                                    </a>
-                                </li>
+                                <li></li>
                             </ul>
                         </div>
-                        <div class="tab">
-                            <div class="tabFirst">
-                                <ul>
-                                    <li class="flexA"></li>
-                                    <li class="flexB">业务方向分类</li>
-                                    <li class="flexD">业务方向-科目</li>
-                                    <li class="flexC">专业分类</li>
-                                    <li class="flexC">工作范围</li>
-                                    <li class="flexC">工作界面(节点)</li>
-                                </ul>
+                        <!--表格添加样式-->
+                        <div class="add">
+                            <div class="add-Top">
+                                <p>信息设置</p>
+                                <span><sup>*</sup>方向:</span>
+                                <input type="text">
+                                <svg role="img" class="down">
+                                    <use xlink:href="#down"></use>
+                                </svg>
+                            </div>
+                            <div class="add-kind">
+                                <div class="add-cls">
+                                    <p class="del-add">
+                                        <a href="javascript:void(0)">
+                                            <img src="/images/minus.png" alt="">
+                                            <span>删除</span>
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <img src="/images/add.png" alt="">
+                                            <span>添加</span>
+                                        </a>
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--点击展开的样式-->
+                                <div class="add-down">
+                                    <a href="javascript:void(0)">
+                                        <svg role="img" class="left">
+                                            <use xlink:href="#left"></use>
+                                        </svg>
+                                        <span>点击查看相关添加</span>
+                                    </a>
+                                </div>
+                                <div class="add-cls add-one">
+                                    <p class="del-add">
+                                        <a href="javascript:void(0)">
+                                            <img src="/images/minus.png" alt="">
+                                            <span>删除</span>
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <img src="/images/add.png" alt="">
+                                            <span>添加</span>
+                                        </a>
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="add-down add-downBg">
+                                    <a href="javascript:void(0)">
+                                        <svg role="img" class="left">
+                                            <use xlink:href="#left"></use>
+                                        </svg>
+                                        <span>点击查看相关添加</span>
+                                    </a>
+                                </div>
+                                <div class="add-cls add-two">
+                                    <p class="del-add">
+                                        <a href="javascript:void(0)">
+                                            <img src="/images/minus.png" alt="">
+                                            <span>删除</span>
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <img src="/images/add.png" alt="">
+                                            <span>添加</span>
+                                        </a>
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="add-down add-downBg">
+                                    <a href="javascript:void(0)">
+                                        <svg role="img" class="left">
+                                            <use xlink:href="#left"></use>
+                                        </svg>
+                                        <span>点击查看相关添加</span>
+                                    </a>
+                                </div>
+                                <div class="add-cls add-two">
+                                    <p class="del-add">
+                                        <a href="javascript:void(0)">
+                                            <img src="/images/minus.png" alt="">
+                                            <span>删除</span>
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <img src="/images/add.png" alt="">
+                                            <span>添加</span>
+                                        </a>
+                                    </p>
+                                    <ul>
+                                        <li>
+
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="list-editSty">
+                                <button>取消</button>
+                                <button>确定</button>
                             </div>
                         </div>
-                        <div class="tab">
-                            <div class="tabTwo insideBg">
-                                <ul>
-                                    <li class="flexA"><div><input type="checkbox"></div></li>
-                                    <li class="flexB">移动通信</li>
-                                    <li class="flexD insideLi">
-                                        <ol class="list-small">
-                                            <li>1.1工程督导</li>
-                                            <li class="leftContent">1.2工程网优</li>
-                                            <li class="leftContent">1.3工程设计、规划</li>
-                                            <li class="leftContent">1.4工程监理</li>
-                                            <li class="leftContent">1.5优化专项</li>
-                                            <li class="leftContent">1.6工程、网优日常代维</li>
-                                        </ol>
-                                    </li>
-                                    <li class="flexC insideLi" >
-                                        <ol class="list-small lastTwo">
-                                            <li>无线</li>
-                                            <li>有线</li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                        </ol>
-                                    </li>
-                                    <li class="flexC insideLi">
-                                        <ol class="list-small moreSmall">
-                                            <li>无线前台</li>
-                                            <li>无线后台</li>
-                                            <li>电信IPRAN</li>
-                                            <li>电信数通/PON后台</li>
-                                            <li>电信数通/PON前台</li>
-                                            <li>OTN前/后台</li>
-                                            <li>SDH前/后台</li>
-                                            <li>IPRAN</li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                        </ol>
-                                    </li>
-                                    <li class="flexC insideLi">
-                                        <ol class="list-small moreSmall">
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                        </ol>
-                                    </li>
-                                </ul>
+                         <!-- 表格编辑样式-->
+                        <div class="edit">
+                            <div class="add-Top">
+                                <p>信息设置</p>
+                                <span><sup>*</sup>方向:</span>
+                                <input type="text">
+                                <svg role="img" class="down">
+                                    <use xlink:href="#down"></use>
+                                </svg>
                             </div>
-                        </div>
-                        <div class="tab">
-                            <div class="tabTwo insideBg">
-                                <ul class="insideBfg">
-                                    <li class="flexA"><div><input type="checkbox"></div></li>
-                                    <li class="flexB">软件</li>
-                                    <li class="flexD insideLi">
-                                        <ol class="list-small list-two">
-                                            <li class="leftContent">2.1J项目实施类VE</li>
-                                            <li class="leftContent">2.2项目实施类PP</li>
-                                            <li class="leftContent">2.3大数据、云处理</li>
-                                            <li class="leftContent">2.4监理</li>
-                                            <li>2.5软件开发与测试</li>
-                                        </ol>
-                                    </li>
-                                    <li class="flexC insideLi" >
-                                        <ol class="list-small moreSmall">
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                        </ol>
-                                    </li>
-                                    <li class="flexC insideLi">
-                                        <ol class="list-small list-twoL">
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li>前端开发</li>
-                                            <li>UI设计</li>
-                                            <li>数据分析</li>
-                                            <li>软件开发工程师</li>
-                                            <li>PHP工程师</li>
-                                            <li>核心网工程师</li>
-                                            <li>嵌入式工程师</li>
-                                            <li>数据通信工程师</li>
-                                        </ol>
-                                    </li>
-                                    <li class="flexC insideLi">
-                                        <ol class="list-small moreSmall">
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                        </ol>
-                                    </li>
-                                </ul>
+                            <div class="add-kind">
+                                <div class="add-cls">
+                                    <p class="del-add">
+                                        <a href="javascript:void(0)">
+                                            <img src="/images/minus.png" alt="">
+                                            <span>删除</span>
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <img src="/images/add.png" alt="">
+                                            <span>添加</span>
+                                        </a>
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--点击展开的样式-->
+                                <div class="add-down">
+                                    <a href="javascript:void(0)">
+                                        <svg role="img" class="left">
+                                            <use xlink:href="#left"></use>
+                                        </svg>
+                                        <span>点击查看相关添加</span>
+                                    </a>
+                                </div>
+                                <div class="add-cls add-one">
+                                    <p class="del-add">
+                                        <a href="javascript:void(0)">
+                                            <img src="/images/minus.png" alt="">
+                                            <span>删除</span>
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <img src="/images/add.png" alt="">
+                                            <span>添加</span>
+                                        </a>
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="add-down add-downBg">
+                                    <a href="javascript:void(0)">
+                                        <svg role="img" class="left">
+                                            <use xlink:href="#left"></use>
+                                        </svg>
+                                        <span>点击查看相关添加</span>
+                                    </a>
+                                </div>
+                                <div class="add-cls add-two">
+                                    <p class="del-add">
+                                        <a href="javascript:void(0)">
+                                            <img src="/images/minus.png" alt="">
+                                            <span>删除</span>
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <img src="/images/add.png" alt="">
+                                            <span>添加</span>
+                                        </a>
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="add-down add-downBg">
+                                    <a href="javascript:void(0)">
+                                        <svg role="img" class="left">
+                                            <use xlink:href="#left"></use>
+                                        </svg>
+                                        <span>点击查看相关添加</span>
+                                    </a>
+                                </div>
+                                <div class="add-cls add-two">
+                                    <p class="del-add">
+                                        <a href="javascript:void(0)">
+                                            <img src="/images/minus.png" alt="">
+                                            <span>删除</span>
+                                        </a>
+                                        <a href="javascript:void(0)">
+                                            <img src="/images/add.png" alt="">
+                                            <span>添加</span>
+                                        </a>
+                                    </p>
+                                    <ul>
+                                        <li>
+
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                        <li>
+                                            <span><sup>*</sup>科目:</span>
+                                            <input type="text">
+                                            <svg role="img" class="down">
+                                                <use xlink:href="#down"></use>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="tab">
-                            <div class="tabTwo insideBg">
-                                <ul class="insideBfg">
-                                    <li class="flexA"><div><input type="checkbox"></div></li>
-                                    <li class="flexB">系统集成</li>
-                                    <li class="flexD insideLi">
-                                        <ol class="list-small list-default">
-                                            <li class="leftContent">3.1智能楼宇、智能小区</li>
-                                            <li class="leftContent">3.2物联网</li>
-                                            <li class="leftContent">3.3物业管理</li>
-                                            <li class="leftContent">3.4局域网</li>
-                                            <li class="leftContent">3.5入网行为管理</li>
-                                            <li class="leftContent">3.6监理</li>
-                                        </ol>
-                                    </li>
-                                    <li class="flexC insideLi" >
-                                        <ol class="list-small moreSmall">
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                        </ol>
-                                    </li>
-                                    <li class="flexC insideLi">
-                                        <ol class="list-small list-twoL">
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                        </ol>
-                                    </li>
-                                    <li class="flexC insideLi">
-                                        <ol class="list-small moreSmall">
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                        </ol>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="tab">
-                            <div class="tabTwo insideBg">
-                                <ul class="insideBfg">
-                                    <li class="flexA"><div><input type="checkbox"></div></li>
-                                    <li class="flexB">广告营销、活动策划</li>
-                                    <li class="flexD insideLi">
-                                        <ol class="list-small list-default">
-                                            <li class="leftContent">4.1单一方案提供</li>
-                                            <li class="leftContent">4.2整体实施</li>
-                                            <li></li>
-                                        </ol>
-                                    </li>
-                                    <li class="flexC insideLi" >
-                                        <ol class="list-small moreSmall">
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                        </ol>
-                                    </li>
-                                    <li class="flexC insideLi">
-                                        <ol class="list-small list-twoL">
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                        </ol>
-                                    </li>
-                                    <li class="flexC insideLi">
-                                        <ol class="list-small moreSmall">
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                        </ol>
-                                    </li>
-                                </ul>
+                            <div class="list-editSty">
+                                <button>取消</button>
+                                <button>确定</button>
                             </div>
                         </div>
                     </div>
