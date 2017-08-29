@@ -1113,26 +1113,6 @@ section {
     }
   }
 }
-/*列表样式的输入框的媒体查询*/
-@media screen  and (max-width:1600px){
-  .rightBottom{
-    section{
-      .add-list{
-        .add-kind{
-          .add-cls{
-            ul{
-              li{
-                input{
-                  width: 260px;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
 /*列表样式的ul和输入框的媒体查询*/
 @media screen  and (min-width:800px) and (max-width:1222px){
   .rightBottom {
@@ -1166,23 +1146,27 @@ section {
 }
 //列表样式查询
 @media screen and (max-width: 1200px) {
-  .secThree {
-    .rightBottom {
-      .contentCenter {
-        .list-content {
-          .list-cenOul {
-            .list-style {
-              span {
-                font-size:13px;
-                .list-oul{
-                  li{
+  section {
+    .secThree {
+      .rightBottom {
+        section{
+          .contentCenter {
+            div.list-content {
+              .list-cenOul {
+                .list-style {
+                  span {
                     font-size:13px;
+                    .list-oul{
+                      li{
+                        font-size:13px;
+                      }
+                    }
                   }
                 }
+                &.list-top{
+                  font-size:13px;
+                }
               }
-            }
-            & .list-top{
-              font-size:13px;
             }
           }
         }
@@ -1190,6 +1174,7 @@ section {
     }
   }
 }
+
 /*列表样式的表头字体的媒体查询*/
 @media screen and (min-width:1366px) and (max-width:1600px){
   .contentCenter{
@@ -1228,6 +1213,59 @@ section {
     }
   }
 }
+
+/*列表样式的输入框的媒体查询*/
+@media screen and (min-width:1300px) and (max-width:1600px){
+  section{
+    .secThree {
+      .rightBottom {
+        section {
+          .contentCenter {
+            div.add {
+              .add-kind {
+                .add-cls {
+                  ul {
+                    li {
+                      input{
+                        width: 260px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*列表样式的输入框的媒体查询*/
+@media screen and (min-width:600px) and (max-width:1000px){
+  section{
+    .secThree {
+      .rightBottom {
+        section {
+          .contentCenter {
+            div.add {
+              .add-kind {
+                .add-cls {
+                  ul {
+                    li {
+                      input{
+                        width: 220px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 /*列表样式的表头字体的媒体查询*/
 @media screen and (min-width:600px) and (max-width:1366px){
   .contentCenter{
@@ -1252,7 +1290,26 @@ section {
       }
     }
   }
+  section{
+    .secThree {
+      .rightBottom {
+        section {
+          .contentCenter {
+            div.list-content {
+              .list-cenOul {
+                .list-top{
+                  font-size:13px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
 }
+/*列表样式的表头字体的媒体查询*/
 @media screen and (max-width: 1620px) {
   section{
     .secThree{
