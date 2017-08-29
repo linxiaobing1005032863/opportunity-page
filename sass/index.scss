@@ -198,7 +198,7 @@ section {
       }
     }
     & .rightNav {
-      height: 4%;
+      height:60px;
       background-color: #fff;
       ul {
         height: 100%;
@@ -309,47 +309,47 @@ section {
         }
         & .contentCenter{
           font-size:16px;
+          & .centerTop {
+            width: 100%;
+            background-color: #636fe7;
+            height: 3rem;
+            ul {
+              display: flex;
+              flex-direction: row;
+              width: 35%;
+              & li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a {
+                  color: #ffffff;
+                }
+                & span {
+                  font-size: 16px;
+                }
+                & svg {
+                  width: 10px;
+                  height: 13px;
+                  fill: #ffffff;
+                  transform: rotate(-90deg);
+                }
+              }
+              & .firstSp {
+                margin: 15px;
+                height: 15px;
+                border-left: 2px solid #fff;
+              }
+
+              & .lastSp {
+                width: 50px;
+              }
+            }
+          }
           div {
             //内容居中
             width: 96%;
             margin: 0 auto;
             //内容表头
-            &.centerTop {
-              width: 100%;
-              background-color: #636fe7;
-              height: 3rem;
-              ul {
-                display: flex;
-                flex-direction: row;
-                width: 35%;
-                & li {
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  a {
-                    color: #ffffff;
-                  }
-                  & span {
-                    font-size: 16px;
-                  }
-                  & svg {
-                    width: 10px;
-                    height: 13px;
-                    fill: #ffffff;
-                    transform: rotate(-90deg);
-                  }
-                }
-                & .firstSp {
-                  margin: 15px;
-                  height: 15px;
-                  border-left: 2px solid #fff;
-                }
-
-                & .lastSp {
-                  width: 50px;
-                }
-              }
-            }
             &.list-content{
               .list-cenOul{
                 //列表表头
@@ -377,16 +377,21 @@ section {
                         style: solid;
                       }
                     }
-                    &.flexA{
+                    &.flex1{
                       flex: 1;
+                      input[type=checkbox]{
+                        width: 20px;
+                        height: 20px;
+                        visibility: hidden;
+                      }
                     }
-                    &.flexB{
+                    &.flex4{
                       flex: 4;
                     }
-                    &.flexC{
+                    &.flex8{
                       flex: 8;
                     }
-                    &.flexD{
+                    &.flex10{
                       flex: 10;
                     }
                   }
@@ -418,8 +423,6 @@ section {
                         display: block;
                         width: 20px;
                         height: 20px;
-                        background-color: #636fe7;
-                        color: #636fe7;
                       }
                     }
                     &.flex1{
@@ -560,7 +563,7 @@ section {
                   display: flex;
                   background-color: #f4f4f6;
                   margin:{
-                    left: 46px;
+                    left: 54px;
                   }
                   .del-add{
                     height: 82px;
@@ -1251,16 +1254,20 @@ section {
   }
 }
 @media screen and (max-width: 1620px) {
-  .rightBottom{
-    section {
-      .contentCenter {
-        div.centerTop{
-          ul{
-            li{
-              span{
-                font-size:14px;
-              }
+  section{
+    .secThree{
+      .rightBottom{
+        section {
+          .contentCenter {
+            div.centerTop{
+              ul{
+                li{
+                  span{
+                    font-size:14px;
+                  }
 
+                }
+              }
             }
           }
         }
