@@ -18,7 +18,7 @@ $('.navOul li').click(function () {
 $('.rightNav li:not(".disable")').on('click',function () {
     $(this).addClass('active').siblings().removeClass('active');
 });
-$('.contentCenter>div:not(".list-content")').hide();
+$('.contentCenter>div:not(".list")').hide();
 //右边主体点击导航变色
 $('.contentTitle>ul>li').on('click',function () {
     $(this).addClass('liSty').siblings().removeClass('liSty');
