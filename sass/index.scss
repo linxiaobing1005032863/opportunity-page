@@ -17,16 +17,16 @@
   justify-content: left;
   align-items: center;
 }
-/*主体结构*/
-section {
-  height: auto;
-  flex: 1 0 auto;
+
+.box{
   color: $fontColor;
   font-size: 20px;
+}
+.nav{
   display: flex;
   //最左边的导航
   .secOne {
-    display: flex;
+    position: fixed;
     flex-direction: column;
     flex: 1;
     background-color: $bigNavColor;
@@ -67,9 +67,10 @@ section {
   }
   //有搜索的导航
   .secTwo {
-    width: 180px;
-    display: flex;
-    flex-direction: column;
+    position: fixed;
+    margin-left: 68px;
+    width: 182px;
+    height: 100%;
     background-color: $secTwoBg;
     font-family: $fontFamily;
     font-size: $navSize;
@@ -147,798 +148,981 @@ section {
       }
     }
   }
-  //右边主体部分
-  .secThree {
+}
+header{
+  background-color: #fff;
+  .headerDiv{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 250px;
+    z-index: 99;
+  }
+  .rightTop {
+    background-color: #f4f4f6;
     display: flex;
-    flex-direction: column;
-    flex: 20;
-    background-color: $secTopColor;
-    .rightTop {
-      height: 100px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      text-align: center;
-      .topLeft {
-        h2 {
-          font-family: "楷体";
-          font-size: 26px;
-          margin-left: 30px;
-          color: #202028;
-          margin-top: 2rem;
-        }
-      }
-      & .topRight {
-        margin-right: -170px;
-        width:400px;
-        display: flex;
-        flex-direction: row;
+    justify-content: space-between;
+    .topLeft {
+      h2 {
+        font-family: "楷体";
+        font-size: 26px;
+        margin-left: 30px;
+        color: #202028;
         margin-top: 2rem;
-        a {
-          margin-left: -10%;
-          width: 26%;
-          display: flex;
-          flex-direction: row;
-          svg {
-            width: 23%;
-            height: 23px;
-            fill: $secTwoBg;
-          }
-        }
-        svg {
-          width: 10%;
-          height: 24px;
-          fill: $secTwoBg;
-        }
-        span {
-          font-family: $fontFamily;
-          font-size: 1rem;
-          color: #333333;
-        }
       }
     }
-    & .rightNav {
-      height:60px;
-      background-color: #fff;
-      ul {
-        height: 100%;
+    & .topRight {
+      margin-right: -160px;
+      width:390px;
+      display: flex;
+      flex-direction: row;
+      margin-top: 2rem;
+      a {
+        margin-left: -10%;
+        width: 26%;
         display: flex;
         flex-direction: row;
-        padding: inherit;
-        margin: auto;
-        li {
-          height: 100%;
-          flex: 1;
-          border-right: 5px solid $secTopColor;
-          justify-content: center;
-          align-items: center;
-          display: flex;
-          text-align: center;
-          a{
-            font-size: 16px;
-            font-family: $fontFamily;
-            svg {
-              width: 22px;
-              fill: #333333;
-            }
-          }
-          &.active{
-            background-color: #636fe7;
-            a {
-              color: #ffffff;
-            }
-          }
-        }
-        & li:last-child {
-          transform: rotate(180deg);
-          flex: 0.5;
-          border:{
-            right: none;
-          }
-        }
-        & li:first-child {
-          flex: 0.5;
-          transform: translateY(7px);
+        svg {
+          width: 23%;
+          height: 23px;
+          fill: $secTwoBg;
         }
       }
+      svg {
+        width: 10%;
+        height: 24px;
+        fill: $secTwoBg;
+      }
+      span {
+        font-family: $fontFamily;
+        font-size: 1rem;
+        color: #333333;
+      }
+    }
+  }
+  & .rightNav {
+    position: relative;
+    width: auto;
+    height:60px;
+    background-color: #fff;
+    section{
+     position: absolute;
+      left: 15px;
+      top: -40px;
+      a{
+        svg {
+          width: 22px;
+          fill: #333333;
+        }
+      }
+      &:nth-of-type(2){
+        position: absolute;
+        left: 1000px;
+        top:-40px;
+      }
+    }
+    & ul {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      padding: inherit;
+      margin: auto;
+      li {
+        height: 100%;
+        flex: 1;
+        border-right: 5px solid $secTopColor;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        a{
+          font-size: 16px;
+          font-family: $fontFamily;
+          svg {
+            width: 22px;
+            fill: #333333;
+          }
+        }
+        &.active{
+          background-color: #636fe7;
+          a {
+            color: #ffffff;
+          }
+        }
+      }
+      & li:last-child{
+      }
+      & li:first-child{
+        border-left:4px solid #f4f4f6;
+      }
+    }
+    & .rightNavOul{
+      &:after{
+        content: '';
+        width: 50px;
+        height: 60px;
+        background: #fff url("/images/dexter.png") no-repeat center center;
+        display: block;
+        z-index: 22;
+        cursor: pointer;
+      }
+      &:before{
+        content: '';
+        width: 50px;
+        height: 60px;
+        background: #fff url("/images/left.png") no-repeat center center;
+        display: block;
+        z-index: 22;
+        cursor: pointer;
+      }
+    }
+  }
+}
+//右边主体部分
+.secThree {
+  margin: {
+    left: 250px;
+  }
+  overflow: hidden;
+  background-color: $secTopColor;
+  .content{
+    margin:{
+      top: 150px;
     }
     /* 主体内容列表部分*/
     & .rightBottom{
-      section{
+      .oneSec{
         width: 94%;
         height: 30%;
         background-color: #ffffff;
         margin: 2% auto;
         display: flex;
         flex-direction: column;
-        /*主体头部导航*/
-        & .contentTitle{
-          ul{
-            //岗位说明书模板内容添加
-            & li{
-              width: 10%;
-              height: 2.5rem;
-              background: #ffffff;
-              margin-right: 3px;
-              border: 1px solid #636fe7;
+      }
+    }
+  }
+}
+/*主体头部导航*/
+.contentTitle{
+  ul{
+    //岗位说明书模板内容添加
+    & li{
+      width: 10%;
+      height: 2.5rem;
+      background: #ffffff;
+      margin-right: 3px;
+      border: 1px solid #636fe7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      font-size:16px;
+    }
+    & .liSty{
+      background-color: #636fe7;
+      a{
+        color: #ffffff;
+      }
+    }
+    //导航的我的岗位
+    .listDiv{
+      font-family: "Arial", "Microsoft Himalaya";
+      color: #000;
+      font-size:16px;
+      line-height: 40px;
+      margin: {
+        left: 20px;
+      }
+      input{
+        width: 200px;
+        height: 38px;
+        border:{
+          style: solid;
+          width: 1px;
+          color: $useBg;
+        }
+        padding: {
+          left: 10px;
+        }
+      }
+      & svg{
+        width: 20px;
+        height: 20px;
+        fill: #999;
+        margin-left: -30px;
+        margin-bottom: -8px;
+      }
+    }
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+  }
+}
+/*功能内容*/
+.contentCenter{
+  font-size:16px;
+  & .centerTop {
+    width: 100%;
+    background-color: #636fe7;
+    height: 3rem;
+    ul {
+      display: flex;
+      flex-direction: row;
+      width: 35%;
+      & li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          color: #ffffff;
+        }
+        & span {
+          font-size: 16px;
+        }
+        & svg {
+          width: 10px;
+          height: 13px;
+          fill: #ffffff;
+          transform: rotate(-90deg);
+        }
+      }
+      & .firstSp {
+        margin: 15px;
+        height: 15px;
+        border-left: 2px solid #fff;
+      }
+
+      & .lastSp {
+        width: 50px;
+      }
+    }
+  }
+  div{
+    //内容居中
+    width: 96%;
+    margin: 0 auto;
+    //内容表头
+    &.list{
+      .list-cenOul{
+        width: 100%;
+        //列表表头
+        & .list-style{
+          display: flex;
+          section{
+            font-size:16px;
+            color: #000;
+            flex:1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border:{
+              width: 1px;
+              top:0;
+              left: 0;
+              color: #c6c6c6;
+              style: solid;
+            }
+            &:first-child{
+              border:{
+                left: 1px;
+                color: #c6c6c6;
+                style: solid;
+              }
+              .checked-none[data-style="checked"]{
+                display: none;
+              }
+              .checked-none[data-style="checked"] + label {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                box-shadow:inset 0 0 2px white;
+                overflow: hidden;
+              }
+              .checked-none[data-style="checked"]:checked + label{
+                background: url("/images/right.png") #ffffff no-repeat center;
+              }
+              .checkedNum[data-style="checkeds"] + label:before{
+                width: 13px;
+                height: 10px;
+                background: url("/images/right.png") #ffffff no-repeat center;
+                text-align: center;
+                -webkit-transition: all 0.2s linear;
+                transition: all 0.2s linear;
+              }
+              .tick{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border-radius: 2px;
+                border: 1px solid #ebebeb;
+              }
+            }
+            &.flex1{
+              flex: 1;
+            }
+            &.flex4{
+              flex: 4;
+            }
+            &.flex8{
+              flex: 8;
+            }
+            &.flex10{
+              flex: 10;
+            }
+            & .list-oul{
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              li{
+                font-family: "Arial", "Microsoft Himalaya";
+                height: 30px;
+                border:{
+                  bottom: 1px;
+                  style: solid;
+                  color: #c6c6c6;
+                }
+                display: flex;
+                align-items: center;
+                flex: 1;
+                &.flex8{
+                  flex: 8;
+                }
+                &.flex6{
+                  flex: 6;
+                }
+                &.flex2{
+                  flex: 2;
+                }
+                &:last-child{
+                  border: {
+                    bottom: 0;
+                  }
+                }
+                &:nth-of-type(2n+1){
+                  background-color: #f7f7fa;
+                }
+                &.text-center{
+                  @include text-content;
+                  background-color: #ffffff;
+                }
+                &.text-left{
+                  @include text-left;
+                }
+              }
+            }
+          }
+        }
+        .list-cenOul{
+          //列表表头
+          & .list-style{
+            display: flex;
+            section,span{
+              font-size:16px;
+              color: #000;
+              flex:1;
               display: flex;
               justify-content: center;
               align-items: center;
-              border-radius: 4px;
-              font-size:16px;
-            }
-            & .liSty{
-              background-color: #636fe7;
-              a{
-                color: #ffffff;
+              border:{
+                width: 1px;
+                top:0;
+                left: 0;
+                color: #c6c6c6;
+                style: solid;
               }
-            }
-            //导航的我的岗位
-            .listDiv{
-              font-family: "Arial", "Microsoft Himalaya";
-              color: #000;
-              font-size:16px;
-              line-height: 40px;
-              margin: {
-                left: 20px;
-              }
-              input{
-                width: 200px;
-                height: 38px;
+              &:first-child{
                 border:{
+                  left: 1px;
+                  color: #c6c6c6;
                   style: solid;
-                  width: 1px;
-                  color: $useBg;
                 }
-                padding: {
-                  left: 10px;
+                .checked-none[data-style="checked"]{
+                  display: none;
+                }
+                .checked-none[data-style="checked"] + label {
+                  display: inline-block;
+                  width: 20px;
+                  height: 20px;
+                  box-shadow:inset 0 0 2px white;
+                  overflow: hidden;
+                }
+                .checked-none[data-style="checked"]:checked + label{
+                  background: url("/images/right.png") #ffffff no-repeat center;
+                }
+                .checkedNum[data-style="checkeds"] + label:before{
+                  width: 13px;
+                  height: 10px;
+                  background: url("/images/right.png") #ffffff no-repeat center;
+                  text-align: center;
+                  -webkit-transition: all 0.2s linear;
+                  transition: all 0.2s linear;
+                }
+                .tick{
+                  display: inline-block;
+                  width: 20px;
+                  height: 20px;
+                  border-radius: 2px;
+                  border: 1px solid #ebebeb;
                 }
               }
-              & svg{
-                width: 20px;
-                height: 20px;
-                fill: #999;
-                margin-left: -30px;
-                margin-bottom: -8px;
+              &.flex1{
+                flex: 1;
+              }
+              &.flex4{
+                flex: 4;
+              }
+              &.flex8{
+                flex: 8;
+              }
+              &.flex10{
+                flex: 10;
+              }
+              & .list-oul{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                li{
+                  font-family: "Arial", "Microsoft Himalaya";
+                  height: 30px;
+                  border:{
+                    bottom: 1px;
+                    style: solid;
+                    color: #c6c6c6;
+                  }
+                  display: flex;
+                  align-items: center;
+                  flex: 1;
+                  &.flex8{
+                    flex: 8;
+                  }
+                  &.flex6{
+                    flex: 6;
+                  }
+                  &.flex2{
+                    flex: 2;
+                  }
+                  &:last-child{
+                    border: {
+                      bottom: 0;
+                    }
+                  }
+                  &:nth-of-type(2n+1){
+                    background-color: #f7f7fa;
+                  }
+                  &.text-center{
+                    @include text-content;
+                    background-color: #ffffff;
+                  }
+                  &.text-left{
+                    @include text-left;
+                  }
+                }
               }
             }
-            display: flex;
-            flex-direction: row;
-            padding: 2%;
           }
         }
-        & .contentCenter{
+      }
+      .list-top{
+          width: 100%;
+          display: flex;
+          height: 40px;
           font-size:16px;
-          & .centerTop {
-            width: 100%;
-            background-color: #636fe7;
-            height: 3rem;
-            ul {
+          font-weight: bold;
+          section{
+            color: #000;
+            flex:1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border:{
+              width: 1px;
+              left: 0;
+              color: #cccccc;
+              style: solid;
+            }
+            &:first-child{
+              border:{
+                left: 1px;
+                color: #cccccc;
+                style: solid;
+              }
+            }
+            &.flex1{
+              flex: 1;
+              .checked-none[data-style="checked"]{
+                display: none;
+              }
+              .checked-none[data-style="checked"] + label {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                box-shadow:inset 0 0 2px white;
+                overflow: hidden;
+              }
+              .checked-none[data-style="checked"]:checked + label{
+                background: url("/images/right.png") #ffffff no-repeat center;
+              }
+              .checkedNum[data-style="checkeds"] + label:before{
+                width: 13px;
+                height: 10px;
+                background: url("/images/right.png") #ffffff no-repeat center;
+                text-align: center;
+                -webkit-transition: all 0.2s linear;
+                transition: all 0.2s linear;
+              }
+              .tick{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border-radius: 2px;
+                border: 1px solid #ebebeb;
+              }
+            }
+            &.flex4{
+              flex: 4;
+            }
+            &.flex8{
+              flex: 8;
+            }
+            &.flex10{
+              flex: 10;
+            }
+          }
+        }
+
+    }
+    /*表格添加样式*/
+    &.add,&.edit{
+      width:90%;
+      font-size:16px;
+      margin: 0 auto;
+      //头部部分
+      .add-Top{
+        background-color: #f4f4f6;
+        font-size:16px;
+        display: flex;
+        height: 85px;
+        justify-content: flex-start;
+        align-items: center;
+        p{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $useBg;
+          width: 35px;
+          margin:{
+            right: 30px;
+          }
+          padding:{
+            top:18px;
+            bottom: 18px;
+            left: 10px;
+            right: 10px;
+          }
+          border:{
+            bottom-left-radius: 5px;
+            top-left-radius: 5px;
+          }
+        }
+        & span{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #000;
+          margin: {
+            right: 10px;
+          }
+          sup{
+            font-size:20px;
+            color: #f00;
+          }
+        }
+        & input{
+          width: 360px;
+          height: 35px;
+          font-family: "Arial", "Microsoft Himalaya";
+          border:{
+            width: 1px;
+            style: solid;
+            color: $useBg;
+            radius: 5px;
+          }
+          padding:{
+            left: 10px;
+          }
+
+        }
+        margin:{
+          bottom: 20px;
+        }
+        svg{
+          width: 20px;
+          fill:#cccccc;
+          margin:{
+            left: -25px;
+          }
+        }
+      }
+      //删除添加样式
+      & .add-kind{
+        overflow: hidden;
+        .add-cls{
+          flex: 1;
+          display: flex;
+          background-color: #f4f4f6;
+          margin:{
+            left: 54px;
+          }
+          .del-add{
+            height: 82px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            background-color: $useBg;
+            width: 35px;
+            padding:{
+              top:4px;
+              bottom: 4px;
+              left: 10px;
+              right: 10px;
+            }
+            border:{
+              bottom-left-radius: 5px;
+              top-left-radius: 5px;
+            }
+            a{
+              text-align: center;
+              span{
+                color: #ffffff;
+                width: 35px;
+                display: inline-block;
+                margin:{
+                  top:-5px;
+                }
+              }
+              &:first-child{
+                span{
+                  color: #e6e6e6;
+                }
+                margin:{
+                  bottom: 5px;
+                }
+                & ::after{
+                  content: '';
+                  display: block;
+                  height: 1px;
+                  width: 40px;
+                  background: linear-gradient(left,rgba(255,255,255,0.1),#ffffff,rgba(255,255,255,0.1));
+                }
+              }
+            }
+
+          }
+          ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            li{
+              margin:{
+                left: 30px;
+                right: 5px;
+              }
+              flex:1;
+              width:95%;
+              font-size:16px;
               display: flex;
-              flex-direction: row;
-              width: 35%;
-              & li {
+              height: 90px;
+              align-items: center;
+              & span{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                a {
-                  color: #ffffff;
+                color: #000;
+                margin: {
+                  right: 10px;
                 }
-                & span {
-                  font-size: 16px;
-                }
-                & svg {
-                  width: 10px;
-                  height: 13px;
-                  fill: #ffffff;
-                  transform: rotate(-90deg);
+                sup{
+                  font-size:20px;
+                  color: #f00;
                 }
               }
-              & .firstSp {
-                margin: 15px;
-                height: 15px;
-                border-left: 2px solid #fff;
-              }
-
-              & .lastSp {
-                width: 50px;
-              }
-            }
-          }
-          div {
-            //内容居中
-            width: 96%;
-            margin: 0 auto;
-            //内容表头
-            &.list-content{
-              .list-cenOul{
-                //列表表头
-                .list-top{
-                  display: flex;
-                  height: 40px;
-                  font-size:16px;
-                  font-weight: bold;
-                  span{
-                    color: #000;
-                    flex:1;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border:{
-                      width: 1px;
-                      left: 0;
-                      color: #cccccc;
-                      style: solid;
-                    }
-                    &:first-child{
-                      border:{
-                        left: 1px;
-                        color: #cccccc;
-                        style: solid;
-                      }
-                    }
-                    &.flex1{
-                      flex: 1;
-                      input[type=checkbox]{
-                        width: 20px;
-                        height: 20px;
-                        visibility: hidden;
-                      }
-                    }
-                    &.flex4{
-                      flex: 4;
-                    }
-                    &.flex8{
-                      flex: 8;
-                    }
-                    &.flex10{
-                      flex: 10;
-                    }
-                  }
-                }
-                & .list-style{
-                  display: flex;
-                  span{
-                    color: #000;
-                    flex:1;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border:{
-                      width: 1px;
-                      top:0;
-                      left: 0;
-                      color: #c6c6c6;
-                      style: solid;
-                    }
-                    &:first-child{
-                      border:{
-                        left: 1px;
-                        color: #c6c6c6;
-                        style: solid;
-                      }
-                      .checked-none[data-style="checked"]{
-                        display: none;
-                      }
-                      .checked-none[data-style="checked"] + label {
-                        display: inline-block;
-                        width: 20px;
-                        height: 20px;
-                        box-shadow:inset 0 0 2px white;
-                        overflow: hidden;
-                      }
-                      .checked-none[data-style="checked"]:checked + label{
-                        background: url("/images/right.png") #ffffff no-repeat center;
-                      }
-                      .checkedNum[data-style="checkeds"] + label:before{
-                        width: 13px;
-                        height: 10px;
-                        background: url("/images/right.png") #ffffff no-repeat center;
-                        text-align: center;
-                        -webkit-transition: all 0.2s linear;
-                        transition: all 0.2s linear;
-                      }
-                      .tick{
-                        display: inline-block;
-                        width: 20px;
-                        height: 20px;
-                        border-radius: 2px;
-                        border: 1px solid #ebebeb;
-                      }
-
-                    }
-                    &.flex1{
-                      flex: 1;
-                    }
-                    &.flex4{
-                      flex: 4;
-                    }
-                    &.flex8{
-                      flex: 8;
-                    }
-                    &.flex10{
-                      flex: 10;
-                    }
-                    & .list-oul{
-                      width: 100%;
-                      height: 100%;
-                      display: flex;
-                      flex-direction: column;
-                      li{
-                        font-family: "Arial", "Microsoft Himalaya";
-                        height: 30px;
-                        border:{
-                          bottom: 1px;
-                          style: solid;
-                          color: #c6c6c6;
-                        }
-                        display: flex;
-                        align-items: center;
-                        flex: 1;
-                        &.flex8{
-                          flex: 8;
-                        }
-                        &.flex6{
-                          flex: 6;
-                        }
-                        &.flex2{
-                          flex: 2;
-                        }
-                        &:last-child{
-                          border: {
-                            bottom: 0;
-                          }
-                        }
-                        &:nth-of-type(2n+1){
-                          background-color: #f7f7fa;
-                        }
-                        &.text-center{
-                          @include text-content;
-                          background-color: #ffffff;
-                        }
-                        &.text-left{
-                          @include text-left;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-            /*表格添加样式*/
-            &.add,&.edit{
-              width:90%;
-              font-size:16px;
-              margin: 0 auto;
-              //头部部分
-              .add-Top{
-                background-color: #f4f4f6;
-                font-size:16px;
-                display: flex;
-                height: 85px;
-                justify-content: flex-start;
-                align-items: center;
-                p{
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  background-color: $useBg;
-                  width: 35px;
-                  margin:{
-                    right: 30px;
-                  }
-                  padding:{
-                    top:18px;
-                    bottom: 18px;
-                    left: 10px;
-                    right: 10px;
-                  }
-                  border:{
-                    bottom-left-radius: 5px;
-                    top-left-radius: 5px;
-                  }
-                }
-                & span{
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  color: #000;
-                  margin: {
-                    right: 10px;
-                  }
-                  sup{
-                    font-size:20px;
-                    color: #f00;
-                  }
-                }
-                & input{
-                  width: 300px;
-                  height: 35px;
-                  font-family: "Arial", "Microsoft Himalaya";
-                  border:{
-                    width: 1px;
-                    style: solid;
-                    color: $useBg;
-                    radius: 5px;
-                  }
-                  padding:{
-                    left: 10px;
-                  }
-
-                }
-                margin:{
-                  bottom: 20px;
-                }
-                svg{
-                  width: 20px;
-                  fill:#cccccc;
-                  margin:{
-                    left: -25px;
-                  }
-                }
-              }
-              //删除添加样式
-              & .add-kind{
-                overflow: hidden;
-                .add-cls{
-                  flex: 1;
-                  display: flex;
-                  background-color: #f4f4f6;
-                  margin:{
-                    left: 54px;
-                  }
-                  .del-add{
-                    height: 82px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 16px;
-                    background-color: $useBg;
-                    width: 35px;
-                    padding:{
-                      top:4px;
-                      bottom: 4px;
-                      left: 10px;
-                      right: 10px;
-                    }
-                    border:{
-                      bottom-left-radius: 5px;
-                      top-left-radius: 5px;
-                    }
-                    a{
-                      text-align: center;
-                      span{
-                        color: #ffffff;
-                        width: 35px;
-                        display: inline-block;
-                        margin:{
-                          top:-5px;
-                        }
-                      }
-                      &:first-child{
-                        span{
-                          color: #e6e6e6;
-                        }
-                        margin:{
-                          bottom: 5px;
-                        }
-                        & ::after{
-                          content: '';
-                          display: block;
-                          height: 1px;
-                          width: 40px;
-                          background: linear-gradient(left,rgba(255,255,255,0.1),#ffffff,rgba(255,255,255,0.1));
-                        }
-                      }
-                    }
-
-                  }
-                  ul{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-wrap: wrap;
-                    li{
-                      margin:{
-                        left: 30px;
-                        right: 5px;
-                      }
-                      flex:1;
-                      width:95%;
-                      font-size:16px;
-                      display: flex;
-                      height: 90px;
-                      align-items: center;
-                      & span{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        color: #000;
-                        margin: {
-                          right: 10px;
-                        }
-                        sup{
-                          font-size:20px;
-                          color: #f00;
-                        }
-                      }
-                      & input{
-                        width: 350px;
-                        height: 35px;
-                        font-family: "Arial", "Microsoft Himalaya";
-                        border:{
-                          width: 1px;
-                          style: solid;
-                          color: $useBg;
-                          radius: 5px;
-                        }
-                        padding:{
-                          left: 10px;
-                        }
-
-                      }
-                      & svg{
-                        width: 20px;
-                        fill:#cccccc;
-                        margin:{
-                          left: -25px;
-                        }
-                      }
-
-                    }
-                  }
-                }
-                //点击查看相关添加
-                & .add-down{
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  width: 86%;
-                  background-color: $useBg;
-                  height: 40px;
-                  margin:{
-                    left:14%;
-                    bottom: 30px;
-                  }
-                  border:{
-                    bottom-left-radius: 5px;
-                  }
-                  a{
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    svg{
-                      width: 15px;
-                      fill:#ffffff;
-                      transform:rotate(-90deg);
-                      margin:{
-                        right: 3px;
-                      }
-                    }
-                    span{
-                      font-size:16px;
-                      color: #ffffff;
-                    }
-                  }
-                }
-                & .add-one{
-                  margin:{
-                    left: 6%;
-                  }
-                }
-                & .add-downBg{
-                  background-color: #eeeef7;
-                  a{
-                    svg{
-                      fill: #666666;
-                    }
-                    span{
-                      color: #666666;
-                    }
-                  }
-                }
-                & .add-two{
-                  margin:{
-                    left: 8%;
-                  }
-                }
-              }
-              /*主体添加内容*/
-              & .addTop{
-                  height: 10%;
-                  display: flex;
-                  margin-bottom: 10px;
-                  p{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 40px;
-                    padding: 5px;
-                    background-color: $useBg;
-                    height: 60px;
-                    margin:{
-                      right: 90px;
-                    }
-                    border-top-left-radius: 5px;
-                    border-bottom-left-radius: 5px;
-                  }
-                  span{
-                    font-size:14px;
-                    color: #000;
-                    margin:{
-                      top:25px;
-                      right: 5px;
-                    }
-
-                  }
-                  & input{
-                    width: 350px;
-                    height: 35px;
-                    margin-top: 17px;
-                    padding:{
-                      left: 5px;
-                    }
-                    border:{
-                      radius: 5px;
-                      width: 1px;
-                      color: $useBg;
-                      style: solid;
-                    }
-                  }
-                  & a{
-                    width: 20px;
-                    height: 36px;
-                    svg{
-                      width: 20px;
-                      height: 36px;
-                      fill: #999;
-                      margin-top: 18px;
-                      margin-left: -25px;
-                    }
-                  }
-
-                }
-              & .addNew{
-                  width: 87%;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  margin: {
-                    left: 114px;
-                    top:20px;
-                  }
-                  .addNewT{
-                    width: 55px;
-                    margin-left: 0;
-                    display: flex;
-                    flex-direction: column;
-                    background-color: $useBg;
-                    height: 76px;
-                    justify-content: center;
-                    align-items: center;
-                    border:{
-                      top-left-radius: 7px;
-                      bottom-left-radius: 7px;
-                    }
-                    a{
-                      display: flex;
-                      color: #dddddd;
-                      flex-direction: column;
-                      em{
-                        font-family: "Meiryo", "Microsoft Himalaya";
-                        font-size:16px;
-                        width: 10px;
-                        height: 10px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        color: #ffffff;
-                        margin:{
-                          left: 7px;
-                        }
-                        border:{
-                          style: solid;
-                          width: 1px;
-                          color: #dddddd;
-                        }
-                      }
-                      &:nth-of-type(2){
-                        border:{
-                          top: 1px;
-                          style: solid;
-                          color: #ffffff;
-                        }
-
-                        color: #ffffff;
-                        em{
-                          margin:{
-                            top:2px;
-                          }
-                          border:{
-                            radius: 50%;
-                          }
-                          padding: 1px;
-                        }
-                      }
-                      & span{
-                        font-size: 14px;
-                      }
-                    }
-                  }
-                  & .addNewC{
-                    width: auto;
-                    display: flex;
-                    margin:{
-                      left: 20px;
-                    }
-                    span{
-                      width: 40px;
-                      display: flex;
-                      margin:{
-                        left: 50px;
-                        right: 10px;
-                      }
-
-                      justify-content: center;
-                      align-items: center;
-                      color: #000;
-                    }
-                    & input{
-                      width: 350px;
-                      height: 37px;
-                      font-family: "Arial", "Microsoft Himalaya";
-                      padding:{
-                        left: 10px;
-                      }
-                      border:{
-                        style: solid;
-                        width: 1px;
-                        color: #c6c6c6;
-                      }
-                    }
-                    & a{
-                      width: 20px;
-                      height: 36px;
-                      svg{
-                        width: 20px;
-                        height: 36px;
-                        fill: #999;
-                        margin-top: 2px;
-                        margin-left: -25px;
-                      }
-                    }
-
-                  }
-                }
-            }
-            &.list-editSty{
-              display: flex;
-              justify-content: flex-end;
-              button{
-                width: 120px;
+              & input{
+                width: 350px;
                 height: 35px;
-                font-size:16px;
-                background-color: #ffffff;
+                font-family: "Arial", "Microsoft Himalaya";
                 border:{
-                  style: solid;
                   width: 1px;
+                  style: solid;
                   color: $useBg;
-                  radius: 3px;
+                  radius: 5px;
                 }
+                padding:{
+                  left: 10px;
+                }
+
+              }
+              & svg{
+                width: 20px;
+                fill:#cccccc;
                 margin:{
-                  right:70px;
-                  top: 50px;
-                }
-                &:last-child{
-                  background-color: $useBg;
-                  color: #ffffff;
+                  left: -25px;
                 }
               }
+
             }
           }
+        }
+        //点击查看相关添加
+        & .add-down{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 86%;
+          background-color: $useBg;
+          height: 40px;
+          margin:{
+            left:14%;
+            bottom: 30px;
+          }
+          border:{
+            bottom-left-radius: 5px;
+          }
+          a{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg{
+              width: 15px;
+              fill:#ffffff;
+              transform:rotate(-90deg);
+              margin:{
+                right: 3px;
+              }
+            }
+            span{
+              font-size:16px;
+              color: #ffffff;
+            }
+          }
+        }
+        & .add-one{
+          margin:{
+            left: 6%;
+          }
+        }
+        & .add-downBg{
+          background-color: #eeeef7;
+          a{
+            svg{
+              fill: #666666;
+            }
+            span{
+              color: #666666;
+            }
+          }
+        }
+        & .add-two{
+          margin:{
+            left: 8%;
+          }
+        }
+      }
+      /*主体添加内容*/
+      & .addTop{
+        height: 10%;
+        display: flex;
+        margin-bottom: 10px;
+        p{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          padding: 5px;
+          background-color: $useBg;
+          height: 60px;
+          margin:{
+            right: 90px;
+          }
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+        span{
+          font-size:14px;
+          color: #000;
+          margin:{
+            top:25px;
+            right: 5px;
+          }
+
+        }
+        & input{
+          width: 350px;
+          height: 35px;
+          margin-top: 17px;
+          padding:{
+            left: 5px;
+          }
+          border:{
+            radius: 5px;
+            width: 1px;
+            color: $useBg;
+            style: solid;
+          }
+        }
+        & a{
+          width: 20px;
+          height: 36px;
+          svg{
+            width: 20px;
+            height: 36px;
+            fill: #999;
+            margin-top: 18px;
+            margin-left: -25px;
+          }
+        }
+
+      }
+      & .addNew{
+        width: 87%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: {
+          left: 114px;
+          top:20px;
+        }
+        .addNewT{
+          width: 55px;
+          margin-left: 0;
+          display: flex;
+          flex-direction: column;
+          background-color: $useBg;
+          height: 76px;
+          justify-content: center;
+          align-items: center;
+          border:{
+            top-left-radius: 7px;
+            bottom-left-radius: 7px;
+          }
+          a{
+            display: flex;
+            color: #dddddd;
+            flex-direction: column;
+            em{
+              font-family: "Meiryo", "Microsoft Himalaya";
+              font-size:16px;
+              width: 10px;
+              height: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #ffffff;
+              margin:{
+                left: 7px;
+              }
+              border:{
+                style: solid;
+                width: 1px;
+                color: #dddddd;
+              }
+            }
+            &:nth-of-type(2){
+              border:{
+                top: 1px;
+                style: solid;
+                color: #ffffff;
+              }
+
+              color: #ffffff;
+              em{
+                margin:{
+                  top:2px;
+                }
+                border:{
+                  radius: 50%;
+                }
+                padding: 1px;
+              }
+            }
+            & span{
+              font-size: 14px;
+            }
+          }
+        }
+        & .addNewC{
+          width: auto;
+          display: flex;
+          margin:{
+            left: 20px;
+          }
+          span{
+            width: 40px;
+            display: flex;
+            margin:{
+              left: 50px;
+              right: 10px;
+            }
+
+            justify-content: center;
+            align-items: center;
+            color: #000;
+          }
+          & input{
+            width: 350px;
+            height: 37px;
+            font-family: "Arial", "Microsoft Himalaya";
+            padding:{
+              left: 10px;
+            }
+            border:{
+              style: solid;
+              width: 1px;
+              color: #c6c6c6;
+            }
+          }
+          & a{
+            width: 20px;
+            height: 36px;
+            svg{
+              width: 20px;
+              height: 36px;
+              fill: #999;
+              margin-top: 2px;
+              margin-left: -25px;
+            }
+          }
+
+        }
+      }
+    }
+    &.list-editSty{
+      display: flex;
+      justify-content: flex-end;
+      button{
+        width: 120px;
+        height: 35px;
+        font-size:16px;
+        background-color: #ffffff;
+        border:{
+          style: solid;
+          width: 1px;
+          color: $useBg;
+          radius: 3px;
+        }
+        margin:{
+          right:70px;
+          top: 50px;
+        }
+        &:last-child{
+          background-color: $useBg;
+          color: #ffffff;
         }
       }
     }
@@ -1015,31 +1199,14 @@ section {
   z-index: 100;
   background: rgba(255, 255, 255, 0.3);
 }
-/*添加编辑样式媒体查询*/
-@media screen  and (max-width:1700px){
-  .editContent{
-    .list-editT {
-      ul {
-        li:last-child{
-          span{
-            width: 26%;
-            text-align: right;
-          }
-        }
-      }
-    }
-  }
-}
 /*列表样式的媒体查询*/
 @media screen and (min-width:600px) and (max-width:1000px){
-  section{
-    .secThree {
-      .rightNav {
-        ul {
-          li {
-            a{
-              font-size:13px;
-            }
+  header{
+    .rightNav {
+      ul {
+        li {
+          a{
+            font-size:13px;
           }
         }
       }
@@ -1087,106 +1254,54 @@ section {
       }
     }
   }
+  .contentCenter div.add .add-Top input{
+    width: 280px;
+  }
 }
-/*列表样式的内容导航的媒体查询*/
-@media screen  and (max-width:800px){
-  .rightBottom {
-    section{
-      .contentTitle{
-        ul {
-          .listDiv {
-            input{
-              width: 8rem;
-            }
 
-          }
-        }
-      }
-    }
+//列表样式查询
+@media screen and (max-width: 1200px) {
+  .contentCenter div.list .list-cenOul .list-style section, .contentCenter div.list .list-top{
+    font-size:15px;
   }
-  .addContent {
-    .list-addT{
-      ul{
-        width: 66%;
-      }
-    }
+}
+/*列表样式的输入框的媒体查询*/
+@media screen and (min-width:600px) and (max-width:1000px){
+  .contentCenter div.list .list-cenOul .list-style section, .contentCenter div.list .list-top{
+    font-size:14px;
   }
-  .editContent {
-    .list-editT{
-      ul{
-        width: 80%;
-      }
-    }
+  .contentCenter div.add .add-kind .add-cls ul li input{
+    width: 220px;
   }
 }
 /*列表样式的内容导航字体的媒体查询*/
 @media screen and(min-width: 1000px)and (max-width:1600px){
-  section {
-    .secThree {
-      .rightNav {
-        ul {
-          li {
-            a {
-              font-size: 14px;
-            }
+  header {
+    .rightNav {
+      ul {
+        li {
+          a {
+            font-size: 14px;
           }
         }
       }
     }
   }
 }
-/*列表样式的ul和输入框的媒体查询*/
-@media screen  and (min-width:800px) and (max-width:1222px){
-  .rightBottom {
-    section{
-      .contentTitle{
-        ul {
-          .listDiv {
-            input{
-              width:10rem;
-            }
-
-          }
-        }
-      }
-    }
-  }
-  .addContent {
-    .list-addT{
-      ul{
-        width: 66%;
-      }
-    }
-  }
-  .editContent {
-    .list-editT{
-      ul{
-        width: 80%;
-      }
-    }
-  }
-}
-//列表样式查询
-@media screen and (max-width: 1200px) {
-  section {
-    .secThree {
-      .rightBottom {
-        section{
+/*列表样式的表头字体的媒体查询*/
+@media screen and (max-width: 1620px) {
+  section{
+    .secThree{
+      .rightBottom{
+        section {
           .contentCenter {
-            div.list-content {
-              .list-cenOul {
-                .list-style {
-                  span {
-                    font-size:13px;
-                    .list-oul{
-                      li{
-                        font-size:13px;
-                      }
-                    }
+            div.centerTop{
+              ul{
+                li{
+                  span{
+                    font-size:14px;
                   }
-                }
-                &.list-top{
-                  font-size:13px;
+
                 }
               }
             }
@@ -1234,58 +1349,6 @@ section {
     }
   }
 }
-/*列表样式的输入框的媒体查询*/
-@media screen and (min-width:1300px) and (max-width:1600px){
-  section{
-    .secThree {
-      .rightBottom {
-        section {
-          .contentCenter {
-            div.add,div.edit {
-              .add-kind {
-                .add-cls {
-                  ul {
-                    li {
-                      input{
-                        width: 260px;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-/*列表样式的输入框的媒体查询*/
-@media screen and (min-width:600px) and (max-width:1000px){
-  section{
-    .secThree {
-      .rightBottom {
-        section {
-          .contentCenter {
-            div.add, div.edit{
-              .add-kind {
-                .add-cls {
-                  ul {
-                    li {
-                      input{
-                        width: 220px;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
 /*列表样式的表头字体的媒体查询*/
 @media screen and (min-width:600px) and (max-width:1366px){
   .contentCenter{
@@ -1315,7 +1378,7 @@ section {
       .rightBottom {
         section {
           .contentCenter {
-            div.list-content {
+            div.list{
               .list-cenOul {
                 .list-top{
                   font-size:13px;
@@ -1329,29 +1392,41 @@ section {
 
   }
 }
-/*列表样式的表头字体的媒体查询*/
-@media screen and (max-width: 1620px) {
-  section{
-    .secThree{
-      .rightBottom{
-        section {
-          .contentCenter {
-            div.centerTop{
-              ul{
-                li{
-                  span{
-                    font-size:14px;
-                  }
-
-                }
-              }
+/*列表样式的内容导航的媒体查询*/
+@media screen  and (max-width:800px){
+  .rightBottom {
+    section{
+      .contentTitle{
+        ul {
+          .listDiv {
+            input{
+              width: 8rem;
             }
+
           }
         }
       }
     }
   }
+  .addContent {
+    .list-addT{
+      ul{
+        width: 66%;
+      }
+    }
+  }
+  .editContent {
+    .list-editT{
+      ul{
+        width: 80%;
+      }
+    }
+  }
 }
+
+
+
+
 
 
 
