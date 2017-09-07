@@ -379,6 +379,7 @@ section{
       height:323px;
       background:rgba(255,255,255,0.2);
       div{
+        display:none;
         position: absolute;
         top:0;
         left:0;
@@ -394,8 +395,12 @@ section{
           color:#777d95;
         }
         h5{
-          margin-top:10px;          
+          margin-top:10px;
+          padding:0 16px 0 16px;          
         }
+      }
+      .profile-act2{
+        display:block;
       }
       input{
         position: absolute;
@@ -416,6 +421,7 @@ section{
         }
       }
       .profile-act3{
+        
         background:#5e7be7;
         color:#fff;
       }
