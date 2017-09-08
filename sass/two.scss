@@ -5,6 +5,7 @@ $fontColor:white;
   padding:0;
   text-decoration:none;
   list-style:none;
+  font-family: ﻿MicrosoftYaHei;
 }
 //头部
 header{
@@ -18,17 +19,19 @@ header{
     display:flex;
     align-items:center;
     margin-left:10%;
-    font-size:26px;
-    color:#626fe6;
-    font-family:STXinwei;
     i{
       margin-right:16px;
       svg{
         padding-top:10px;
         fill:#999999;
-        width:26px;
-        height:26px;
+        width:36px;
+        height:36px;
       }
+    }
+    a{
+      color:#626fe6;
+      font-family: ﻿STXinwei;
+      font-size:36px;
     }
   }
   .right{
@@ -38,6 +41,7 @@ header{
       height:36px;
       border:1px solid #fe6049;
       background:#fff;
+      border-radius:5px;
       &:nth-child(2){
         border:1px solid red;
         background:#fe6049;
@@ -57,15 +61,16 @@ section{
     justify-content:center;
     align-items:center;
     input{
-      height:46px;
+      height:40px;
       width:473px;
-      font-size:18px;
+      font-size:14px;
       padding-left:20px;
       border:0px solid black;
+      color:#a78aac;
     }
     button{
       width:124px;
-      height:46px;
+      height:40px;
       background:#5b83e7;
       border:0px solid black;
       color:#fff;
@@ -87,13 +92,29 @@ section{
       width:266 px;
       height:16px;
       a{
-        color:#333;
+        color:#666;
+        font-size:12px;
+      }
+      .nav-left1{
+        width:15px;
+        height:15px;
+        position: relative;
+        svg{
+          position: absolute;
+          top:6px;
+          left:-26px;
+          width:15px;
+          height:15px;
+          fill:#767a8a;
+          margin-right:6px;
+        }
       }
       i{
         svg{
           width:15px;
           height:15px;
           fill:#767a8a;
+          margin:0 6px;
         }
       }
     }
@@ -128,7 +149,8 @@ section{
             height:50px;
             color:#666;
             span{
-
+              font-size:16px;
+              color:#333;
               padding-left:10px;
             }
           }
@@ -146,7 +168,11 @@ section{
           h4{
             color:#fff;
             background:#636fe7;
+            span{
+              color:#fff;
+            }
           }
+          
           ul{
             li{
               display:flex;
@@ -155,10 +181,15 @@ section{
               height:50px;
               background:#fcfdff;
               a{
+                font-size:14px;
                 padding-left:60px;
-                color:#333;
+                color:#666;
               }
               &:hover{
+                a{
+                  color:#333;
+                }
+                
                 background:#f0f4ff;
               }
             }
@@ -203,6 +234,7 @@ section{
               height:30px;
               background:#f7882f;
               border:1px solid #fff;
+              color:#fff;
             }
           }
           p{
@@ -232,30 +264,41 @@ section{
               margin-right:28px;
               text-align:center;
               h2{
-                margin:16px 0 8px 0;
+                font-size:30px;
+                margin:12px 0 3px 0;
                 color:#626fe6;
               }
               h4{
                 color:#666;
+                font-size:14px;
+                font-weight:normal;
               }
             }
             .box-r-m2{
               width:260px;
               margin-right:30px;
               h3{
-                color:#626fe6;
+                color:#636fe7;
                 font-width:normal;
-                font-size:17px;
+                font-size:18px;
                 margin-bottom:5px;
+                font-weight:normal;
               }
               span{
                 color:#666;
-                font-size:13px;
+                font-size:10px;
+                i{
+                  font-style:normal;
+                }
               }
               h5{
-                font-size:15px;
+                font-size:12px;
                 margin:3px 0 0 0;
                 color:#333;
+                i{
+                  font-weight:normal;
+                  font-style:normal;
+                }
               }
             }
             .box-r-m3{
@@ -267,6 +310,10 @@ section{
                 &:nth-child(1){
                   margin-top:53px;
                 }
+                i{
+                  font-weight:normal;
+                  font-style:normal;
+                }
               }
             }
             .box-r-m4{
@@ -277,6 +324,10 @@ section{
                 color:#333;
                 &:nth-child(1){
                   margin-top:53px;
+                }
+                i{
+                  font-weight:normal;
+                  font-style:normal;
                 }
               }
             }
@@ -319,6 +370,9 @@ section{
           }
           .box-r-b-act{
             background:#5e7be7;
+            a{
+              color:#fff;
+            }
           }
           span{
             input{

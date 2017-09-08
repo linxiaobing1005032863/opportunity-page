@@ -5,6 +5,7 @@ $fontColor:white;
   padding:0;
   text-decoration:none;
   list-style:none;
+  font-family: ﻿MicrosoftYaHei;
 }
 //头部
 header{
@@ -19,17 +20,19 @@ header{
     display:flex;
     align-items:center;
     margin-left:10%;
-    font-size:26px;
-    color:#626fe6;
-    font-family:STXinwei;
     i{
       margin-right:16px;
       svg{
         padding-top:10px;
         fill:#999999;
-        width:26px;
-        height:26px;
+        width:36px;
+        height:36px;
       }
+    }
+    a{
+      color:#626fe6;
+      font-family: ﻿STXinwei;
+      font-size:36px;
     }
   }
   .right{
@@ -39,6 +42,7 @@ header{
       height:36px;
       border:1px solid #fe6049;
       background:#fff;
+      border-radius:5px;
       &:nth-child(2){
         border:1px solid red;
         background:#fe6049;
@@ -51,9 +55,22 @@ header{
 // 主要
 section{
   width: 100%;
-  img{
+  .d-img{
     width:100%;
+    overflow: hidden; 
+    margin-bottom: 50px auto;  
+    img{
+      width:100%;
+      cursor: pointer;
+      transition: all 2.5s ease;
+    }
+    &:hover img{
+      transform: scale(1.2);
+      
+    }
   }
+  
+
   //岗位轮换
   .more{
     width:100%;
@@ -75,14 +92,14 @@ section{
       }
       a{
         margin:0 26px 0 26px;
-        font-size:22px;
+        font-size:26px;
         font-weight:bold;
         color:#333;
       }
       @media screen and (max-width: 1380px){
         a{
           transition: all 1s ease;
-          font-size:16px;
+          font-size:18px;
         }
       }  
     }
@@ -94,11 +111,12 @@ section{
       text-align:center;
       p{
         margin-top:2.5%;
-        font-size:8px;
+        font-size:14px;
+        color:#333;
       }
       a{
         color:#333;
-        font-size:10px;
+        font-size:16px;
         font-weight:bold;
         display:block;
         margin:0 auto;
@@ -107,25 +125,28 @@ section{
         height:40px;
         line-height:38px;
         border:2px solid #636fe7;
+        &:hover{
+          
+          color:#fff;
+          font-weight:bold;
+          border:0 solid black;
+          background:linear-gradient(to right, #5988e7 , #636fe7);
+        }
       }
+      
     }
   }
 
 //四个模块
   .jobs{
     width:100%;
-    height:345px;
+    // height:345px;
     display:flex;
     flex-direction: row;
     justify-content:center;
 
 
-    @media screen and (max-width: 1460px){
-      &{
-        transition: all 1s ease;
-        height:247px;
-      }
-    }
+    
     div{
       width:350px;
       height:345px;
@@ -136,37 +157,40 @@ section{
       .j-one{
         border:0 solid black;
         width:100%;
-        height:22%;
+        height:130px;
         display:flex;
         flex-direction:column;
         box-sizing:border-box;
         background:#eaeefa;
         i{
-          padding:5px;
+          padding:8px;
           margin:0 auto;
           margin-top:1%;
-          margin-bottom:1%;
+          margin-bottom:3%;
           border:1px solid #d9dff1;
           border-radius:50%;
           svg{
             fill:#5a86e7;
-            width:30px;
-            height:30px;
+            width:36px;
+            height:36px;
           }
         }
         h4{
           text-align:center;
+          font-size:16px;
+          color:#333;
         }
       }
       h5{
         text-align:center;
-        margin:5px 0 5px 0;
+        margin:10px 0 5px 0;
         color:#636fe7;
+        font-size:14px;
       }
       .j-two{
           border:0 solid black;
           width:100%;
-          height:55%;
+          height:36%;
           display:flex;
           flex-wrap:wrap;
           div{
@@ -179,7 +203,7 @@ section{
               width:100%;
               height:32px;
               color:#333;
-              font-size:5px;
+              font-size:12px;
               i{
                 font-style:normal;
                 font-weight:bold;
@@ -205,29 +229,33 @@ section{
 
       border-left:1px solid #d9dff1;
     }
-
     @media screen and (max-width: 1460px){
+      &{
+        transition: all 1s ease;
+        height:266px;
+      }
       div{
         transition: all 1s ease;
         width:250px;
-        height:245px;
+        height:300px;
         .j-one{
+          height:91px;
           i{
-            padding:2px;
+            padding:8px;
             margin:0 auto;
-            margin-top:1%;
-            margin-bottom:1%;
+            margin-top:2%;
+            margin-bottom:3%;
             border:1px solid #d9dff1;
             border-radius:50%;
             svg{
               fill:#5a86e7;
-              width:15px;
-              height:15px;
+              width:25px;
+              height:25px;
             }
           }
         }
         .j-two{
-          height:50%;
+          height:42%;
         }
       }
     }
@@ -238,7 +266,10 @@ section{
       margin-top:-20px;
       .j-one{
         background:#5987e7;
-        color:#fff;
+        h4{
+          color:#fff;
+        }
+        
         i{
           svg{
             fill:#fff;
@@ -246,7 +277,8 @@ section{
         }
       }
       .j-three{
-        background:#fe7a49;
+        background:linear-gradient(to right, #fe7c49 , #fe7a49);
+        // background:#fe7a49;
         color:#fff;
       }
     }
@@ -254,19 +286,17 @@ section{
       .hov:hover{
         transition: all 1s ease;
         width:270px;
-        height:265px;
+        height:320px;
         .j-one{
           i{
-            padding:3px;
+            padding:8px;
             margin:0 auto;
             margin-top:1%;
-            margin-bottom:1%;
+            margin-bottom:3%;
             border:1px solid #d9dff1;
             border-radius:50%;
             svg{
               fill:#fff;
-              width:16px;
-              height:16px;
             }
           }
         } 
@@ -299,14 +329,14 @@ section{
       }
       a{
         margin:0 26px 0 26px;
-        font-size:22px;
+        font-size:26px;
         font-weight:bold;
         color:#333;
       }
       @media screen and (max-width: 1380px){
         a{
           transition: all 1s ease;
-          font-size:16px;
+          font-size:18px;
         }
       }  
     }
@@ -328,17 +358,18 @@ section{
           justify-content:center;
           svg{
             fill:#000;
-            width:30px;
-            height:36px;
+            width:42px;
+            height:42px;
           }
         }
         a{
-          color:#000;
-          font-size:16px;
+          color:#333;
+          font-size:22px;
         }
       }
       .profile-act1{
-        background:#5e7be7;
+        border:0 solid black;
+        background:linear-gradient(to right, #5988e7 , #636fe7);
         i{
           svg{
             fill:#fff;
@@ -361,6 +392,16 @@ section{
           transition: all 1s ease;
           width:201px;
           height:72px;
+          i{
+            svg{
+              width:36px;
+              height:36px;
+            }
+          }
+          a{
+            color:#333;
+            font-size:16px;
+          }
         }
       }
       @media screen and (min-width: 1550px){
@@ -389,14 +430,18 @@ section{
         color:#333;
         h3{
           margin-top:26px;
+          font-size:24px;
+          color:333;
         }
         p{
           margin-top:10px;
           color:#777d95;
+          font-size:14px;
         }
         h5{
           margin-top:10px;
-          padding:0 16px 0 16px;          
+          padding:0 16px 0 16px;
+          font-size:15px;          
         }
       }
       .profile-act2{
@@ -409,6 +454,10 @@ section{
         height:60px;
         background:rgba(255,255,255,0);
         border:1px #5e7be7 solid;
+        padding-right:120px;
+        padding-bottom:20px;
+        font-size:16px;
+        font-weight:bold;
         &:nth-child(4){
           left:6%;
         }
@@ -422,28 +471,29 @@ section{
       }
       .profile-act3{
         
-        background:#5e7be7;
+        border:0 solid black;
+        background:linear-gradient(to right, #5988e7 , #636fe7);
         color:#fff;
       }
       i{
         position: absolute;
         bottom:26px;
         transform:rotate(180deg);
-        &:nth-child(7){
-          left:6%;
-          margin-left:235px;
-        }
-        &:nth-child(8){
-          left:50%;
-          margin-left:110px;
-        }
-        &:nth-child(9){
-          right:6%;
-        }
+        // &:nth-child(7){
+        //   left:6%;
+        //   margin-left:235px;border:1px solid red;
+        // }
+        // &:nth-child(8){
+        //   left:50%;
+        //   margin-left:110px;
+        // }
+        // &:nth-child(9){
+        //   right:6%;
+        // }
         svg{
           fill:#000;
-          width:14px;
-          height:11px;
+          width:20px;
+          height:16px;
         }
       }
       .profile-act4{
@@ -473,6 +523,8 @@ section{
           bottom:21px;
           width:200px;
           height:48px;
+          padding-right:110px;
+          padding-bottom:16px;
           &:nth-child(4){
             left:6%;
           }
@@ -487,15 +539,18 @@ section{
         i{
           bottom:21px;
           &:nth-child(7){
-            left:6%;
+            left:4.5%;
+            bottom:26px;
             margin-left:185px;
           }
           &:nth-child(8){
-            left:50%;
+            left:48%;
+            bottom:26px;
             margin-left:85px;
           }
           &:nth-child(9){
-            right:6%;
+            right:7.5%;
+            bottom:26px;
           }
         }
       }
@@ -522,6 +577,8 @@ section{
           bottom:16px;
           width:150px;
           height:36px;
+          padding-right:60px;
+          padding-bottom:8px;
           &:nth-child(4){
             left:6%;
           }
@@ -536,15 +593,18 @@ section{
         i{
           bottom:16px;
           &:nth-child(7){
-            left:6%;
+            left:5%;
+            bottom:16px;
             margin-left:135px;
           }
           &:nth-child(8){
-            left:50%;
+            left:49%;
+            bottom:16px;
             margin-left:60px;
           }
           &:nth-child(9){
-            right:6%;
+            right:7%;
+            bottom:16px;
           }
           svg{
             fill:#000;
@@ -594,15 +654,18 @@ section{
         i{
           bottom:26px;
           &:nth-child(7){
-            left:6%;
+            left:4.5%;
+            bottom:36px;
             margin-left:235px;
           }
           &:nth-child(8){
-            left:50%;
+            left:48%;
+            bottom:36px;
             margin-left:110px;
           }
           &:nth-child(9){
-            right:6%;
+            right:7.5%;
+            bottom:36px;
           }
         }
       }
@@ -647,14 +710,14 @@ section{
       }
       a{
         margin:0 26px 0 26px;
-        font-size:22px;
+        font-size:26px;
         font-weight:bold;
         color:#333;
       }
       @media screen and (max-width: 1380px){
         a{
           transition: all 1s ease;
-          font-size:16px;
+          font-size:18px;
         }
       }  
     }
@@ -674,7 +737,7 @@ section{
         background-size:100% 100%;
       }
       .infor-tp2{
-        background:url(/images/index/infor1.png);
+        background:url(/images/index/infor2.png);
         background-size:100% 100%;
       }
       .infor-tp3{
@@ -689,7 +752,10 @@ section{
         h4{
           margin-top:64px;
           margin-left:50px;
+          font-size:16px;
+          color:#333;
           i{
+            font-size:14px;
             font-style:normal;
             color:#999;
             font-weight:normal;
@@ -702,6 +768,8 @@ section{
         p{
           margin-bottom:56px;
           margin-left:50px;
+          font-size:16px;
+          color:#333;
         }
         button{
           width:20%;
@@ -711,6 +779,8 @@ section{
           margin-top:6px;
           margin-left:50px;
           background:#fff;
+          font-size:14px;
+          padding-right:36px;
 
           display:flex;
           justify-content:center;
@@ -724,6 +794,16 @@ section{
               fill:#000;
               width:14px;
               height:11px;
+            }
+          }
+          &:hover{
+            background:linear-gradient(to right, #fe7c49 , #fe7a49);
+            color:#fff;
+            font-weight:bold;
+            i{
+              svg{
+                fill:#fff;
+              }
             }
           }
         }
@@ -740,7 +820,10 @@ section{
         h4{
           margin-top:64px;
           margin-right:50px;
+          font-size:16px;
+          color:#333;
           i{
+            font-size:14px;
             font-style:normal;
             color:#999;
             font-weight:normal;
@@ -755,6 +838,8 @@ section{
         p{
           margin-bottom:56px;
           margin-right:50px;
+          font-size:16px;
+          color:#333;
         }
         button{
           width:20%;
@@ -764,6 +849,8 @@ section{
           margin-top:6px;
           margin-left:510px;
           background:#fff;
+          font-size:14px;
+          padding-right:36px;
 
           display:flex;
           justify-content:center;
@@ -777,6 +864,16 @@ section{
               fill:#000;
               width:14px;
               height:11px;
+            }
+          }
+          &:hover{
+            background:linear-gradient(to right, #fe7c49 , #fe7a49);
+            color:#fff;
+            font-weight:bold;
+            i{
+              svg{
+                fill:#fff;
+              }
             }
           }
         }
@@ -879,14 +976,14 @@ section{
       }
       a{
         margin:0 26px 0 26px;
-        font-size:22px;
+        font-size:26px;
         font-weight:bold;
         color:#333;
       }
       @media screen and (max-width: 1380px){
         a{
           transition: all 1s ease;
-          font-size:16px;
+          font-size:18px;
         }
       }  
     }
@@ -902,6 +999,7 @@ section{
         h2{
           margin:36px 0 0 0;
           color:#333;
+          font-size:24px;
         }
         div{
           width:70px;
@@ -911,9 +1009,12 @@ section{
         }
         p{
           color:#777d95;
+          font-size:14px;
+          font-family: ﻿ArialMT;
         }
         h5{
           color:#333;
+          font-size:14px;
           margin-top:10px;
         }
         button{
@@ -922,6 +1023,12 @@ section{
           background:rgba(255,255,255,0);
           border:2px solid #6175e7;
           margin-top:56px;
+          &:hover{
+            color:#fff;
+            font-weight:bold;
+            border:0 solid black;
+            background:linear-gradient(to right, #5988e7 , #636fe7);
+          }
         }
       }
       .skill-right{
@@ -929,6 +1036,7 @@ section{
         h5{
           color:#333;
           margin-top:10px;
+          font-size:14px;
           &:nth-child(1){
             margin-top:36px;
           }
@@ -1073,14 +1181,14 @@ section{
       }
       a{
         margin:0 26px 0 26px;
-        font-size:22px;
+        font-size:26px;
         font-weight:bold;
         color:#333;
       }
       @media screen and (max-width: 1380px){
         a{
           transition: all 1s ease;
-          font-size:16px;
+          font-size:18px;
         }
       }  
     }
@@ -1105,6 +1213,12 @@ section{
         height:40px;
         line-height:38px;
         border:2px solid #636fe7;
+        &:hover{
+          color:#fff;
+          font-weight:bold;
+          border:0 solid black;
+          background:linear-gradient(to right, #5988e7 , #636fe7);
+        }
       }
     }
     .recruitment-main{
@@ -1184,6 +1298,7 @@ footer{
   h4{
     margin-left:30px;
     color:#333;
+    font-size:16px;
   }
   div{
     width:70px;
@@ -1195,6 +1310,7 @@ footer{
     color:#626fe6;
     margin-left:30px;
     margin-bottom:10px;
+    font-size:14px;
   }
   p{
     font-size:13px;
@@ -1206,6 +1322,7 @@ footer{
     i{
       margin-right:20px;
       font-style:normal;
+      font-size:12px;
     }
   }
 }
