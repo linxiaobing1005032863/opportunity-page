@@ -1,15 +1,20 @@
 $bgColor:#fcf;
 $fontColor:white;
-*{
+html, body, div, span, nav, header, iframe,h1, h2, h3, h4, h5, h6, p, section, footer,a, form, address, big, cite, code,del, dfn, em, img, ins, fieldset, q, s,button,svg, samp,small, strike, strong, sub, sup,label, var,b, u, i,input, dl, dt, dd, ol, ul, li,figure,figcaption{
   margin:0;
   padding:0;
   text-decoration:none;
   list-style:none;
-  font-family: ﻿MicrosoftYaHei;
+  font-family: ﻿"MicrosoftYaHei";
+  font-size:14px;
+  color:#333;
+  outline: none;
+  font-weight:normal;
+  font-style:normal;
 }
 //头部
 header{
-  // background:#ccc;
+  overflow:hidden;
   width: 100%;
   height:80px;
   display:flex;
@@ -54,11 +59,46 @@ header{
 
 // 主要
 section{
+  overflow:hidden;
   width: 100%;
   .d-img{
     width:100%;
     overflow: hidden; 
-    margin-bottom: 50px auto;  
+    margin-bottom: 50px auto;
+    position: relative;
+    .ptdw{
+      width:700px;
+      height:192px;
+      position: absolute;
+      bottom:50px;
+      left:260px;
+      background:#3b3a5a;
+      border-bottom:4px solid #fe7949;
+      display:flex;
+      flex-direction:column;
+      padding-left:10px;
+      a{
+        display:block;
+        color:#fff;
+        width:140px;
+        height:36px;
+        background:linear-gradient(to right, #fe7c49 , #fe7a49);
+        text-align:center;
+        line-height:36px;
+        border-radius:18px;
+        margin-left:30px;
+        margin-top:-20px;
+        margin-bottom:10px;
+      }
+      span{
+        i{
+          color:#fe7a49;
+        }
+        color:#fff;
+        font-size:12px;
+        line-height:21px;
+      }
+    } 
     img{
       width:100%;
       cursor: pointer;
@@ -99,7 +139,7 @@ section{
       @media screen and (max-width: 1380px){
         a{
           transition: all 1s ease;
-          font-size:18px;
+          // font-size:18px;
         }
       }  
     }
@@ -140,14 +180,11 @@ section{
 //四个模块
   .jobs{
     width:100%;
-    // height:345px;
     display:flex;
     flex-direction: row;
+    flex-wrap:wrap;
     justify-content:center;
-
-
-    
-    div{
+    .hov{
       width:350px;
       height:345px;
       border-top:1px solid #d9dff1;
@@ -219,7 +256,7 @@ section{
         border:1px solid #fe9a72;
         margin:0 auto;
         margin-top:6px;
-
+        color:#333;
         display:flex;
         justify-content:center;
         align-items:center;
@@ -232,11 +269,11 @@ section{
     @media screen and (max-width: 1460px){
       &{
         transition: all 1s ease;
-        height:266px;
+        // height:266px;
       }
-      div{
+      .hov{
         transition: all 1s ease;
-        width:250px;
+        width:310px;
         height:300px;
         .j-one{
           height:91px;
@@ -257,6 +294,12 @@ section{
         .j-two{
           height:42%;
         }
+      }
+    }
+    @media screen and (max-width: 1300px){
+      .hov{
+        margin:60px;
+        border-left:1px solid #d9dff1;
       }
     }
     .hov:hover{
@@ -285,7 +328,7 @@ section{
     @media screen and (max-width: 1460px){
       .hov:hover{
         transition: all 1s ease;
-        width:270px;
+        width:330px;
         height:320px;
         .j-one{
           i{
@@ -323,12 +366,14 @@ section{
         div{
           right:0;
         }
+        width:33% !important;
       }
       .profile-h2{
         @extend .profile-h;
+        width:33% !important;
       }
       a{
-        margin:0 26px 0 26px;
+        margin:0 6px 0 6px;
         font-size:26px;
         font-weight:bold;
         color:#333;
@@ -336,7 +381,7 @@ section{
       @media screen and (max-width: 1380px){
         a{
           transition: all 1s ease;
-          font-size:18px;
+          // font-size:18px;
         }
       }  
     }
@@ -419,7 +464,7 @@ section{
       width:931px;
       height:323px;
       background:rgba(255,255,255,0.2);
-      div{
+      a{
         display:none;
         position: absolute;
         top:0;
@@ -479,17 +524,6 @@ section{
         position: absolute;
         bottom:26px;
         transform:rotate(180deg);
-        // &:nth-child(7){
-        //   left:6%;
-        //   margin-left:235px;border:1px solid red;
-        // }
-        // &:nth-child(8){
-        //   left:50%;
-        //   margin-left:110px;
-        // }
-        // &:nth-child(9){
-        //   right:6%;
-        // }
         svg{
           fill:#000;
           width:20px;
@@ -704,9 +738,11 @@ section{
         div{
           right:0;
         }
+        width:30% !important;
       }
       .infor-h2{
         @extend .more-h;
+        width:30% !important;
       }
       a{
         margin:0 26px 0 26px;
@@ -717,7 +753,7 @@ section{
       @media screen and (max-width: 1380px){
         a{
           transition: all 1s ease;
-          font-size:18px;
+          // font-size:18px;
         }
       }  
     }
@@ -733,16 +769,31 @@ section{
         height:300px;
       }
       .infor-tp1{
-        background:url(/images/index/infor1.png);
-        background-size:100% 100%;
+        a{
+          display:flex;
+          width:100%;
+          height:100%;
+          background:url(/images/index/infor1.png);
+          background-size:100% 100%;
+        }
       }
       .infor-tp2{
-        background:url(/images/index/infor2.png);
-        background-size:100% 100%;
+        a{
+          display:flex;
+          width:100%;
+          height:100%;
+          background:url(/images/index/infor2.png);
+          background-size:100% 100%;
+        }
       }
       .infor-tp3{
-        background:url(/images/index/infor3.png);
-        background-size:100% 100%;
+        a{
+          display:flex;
+          width:100%;
+          height:100%;
+          background:url(/images/index/infor3.png);
+          background-size:100% 100%;
+        }
       }
       .infor-more1{
 
@@ -771,7 +822,7 @@ section{
           font-size:16px;
           color:#333;
         }
-        button{
+        a{
           width:20%;
           height:12%;
           border-radius:25px;
@@ -781,6 +832,7 @@ section{
           background:#fff;
           font-size:14px;
           padding-right:36px;
+          color:#333;
 
           display:flex;
           justify-content:center;
@@ -789,6 +841,7 @@ section{
           i{
             position: absolute;
             left:100px;
+            margin-left:16px;
             transform:rotate(180deg);
             svg{
               fill:#000;
@@ -841,7 +894,7 @@ section{
           font-size:16px;
           color:#333;
         }
-        button{
+        a{
           width:20%;
           height:12%;
           border-radius:25px;
@@ -851,6 +904,7 @@ section{
           background:#fff;
           font-size:14px;
           padding-right:36px;
+          color:#333;
 
           display:flex;
           justify-content:center;
@@ -859,6 +913,7 @@ section{
           i{
             position: absolute;
             left:100px;
+            margin-left:16px;
             transform:rotate(180deg);
             svg{
               fill:#000;
@@ -900,7 +955,7 @@ section{
           div{
             margin-left:35px;
           }
-          button{
+          a{
             margin-left:35px;
             i{
               left:76px;
@@ -919,8 +974,8 @@ section{
           div{
             margin:10px 0 10px 386px;
           }
-          button{
-            margin-left:362px;
+          a{
+            margin-left:312px;
             i{
               left:76px;
             }
@@ -937,7 +992,7 @@ section{
           div{
             margin:10px 0 10px 580px;
           }
-          button{
+          a{
             margin-left:510px;
           }
         }
@@ -979,13 +1034,16 @@ section{
         font-size:26px;
         font-weight:bold;
         color:#333;
-      }
-      @media screen and (max-width: 1380px){
+      } 
+    }
+    @media screen and (max-width: 1460px){
+      .skill-top{
+        height:60px;
         a{
           transition: all 1s ease;
-          font-size:18px;
+          // font-size:18px;
         }
-      }  
+      } 
     }
     .skill-bottom{
       position: relative;
@@ -996,6 +1054,7 @@ section{
       .skill-left{
         width:50%;
         text-align:center;
+        margin-right:36px;
         h2{
           margin:36px 0 0 0;
           color:#333;
@@ -1017,9 +1076,14 @@ section{
           font-size:14px;
           margin-top:10px;
         }
-        button{
+        a{
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          color:#333;
           width:220px;
           height:40px;
+          margin:0 auto;
           background:rgba(255,255,255,0);
           border:2px solid #6175e7;
           margin-top:56px;
@@ -1127,7 +1191,7 @@ section{
           h5{
             margin-top:10px;
           }
-          button{
+          a{
             width:220px;
             height:40px;
             margin-top:56px;
@@ -1188,7 +1252,7 @@ section{
       @media screen and (max-width: 1380px){
         a{
           transition: all 1s ease;
-          font-size:18px;
+          // font-size:18px;
         }
       }  
     }
@@ -1250,12 +1314,60 @@ section{
   }
 }
 footer{
-  width: 100%;
-  height:280px;
-  background:url(/images/index/footer.jpg);
-  background-size:100% 100%;
+  height:278px;
+  width:100%;
+  background:#333;
+  overflow:hidden;
+  position: relative;
+  .foot{
+    width:1250px;
+    height:100%;
+    margin:0 auto;
+    display:flex;
+    position: relative;
+    div{
+      height:100%;
+      width:20px;
+      flex:1;
+      display:flex;
+      align-items:center;
+      flex-direction:column;
+      i{
+        display:block;
+        margin-top:54px;
+        margin-bottom:20px;
+        width:42px;
+        height:35px;
+      }
+      ul{
+        li{
+          margin-bottom:20px;
+          a{
+            color:#fff;
+          }
+        }
+      }
+    }
+    span{
+      position: absolute;
+      top:220px;
+      left:50%;
+      margin-left:-365px;
+      color:#fff;
+      i{
+        color:#fff;
+        margin-left:20px;
+      }
+    }
+  }
 }
-
+@media screen and (max-width: 1250px){
+  footer{
+    .foot{
+      width:950px;
+    }
+  }
+}
 
 
 
@@ -1306,7 +1418,7 @@ footer{
     background:#fe7c49;
     margin:10px 0 36px 30px;
   }
-  h5{
+  a{
     color:#626fe6;
     margin-left:30px;
     margin-bottom:10px;
@@ -1326,4 +1438,3 @@ footer{
     }
   }
 }
-// font-style:normal;

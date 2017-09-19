@@ -1,11 +1,16 @@
 $bgColor:#fcf;
 $fontColor:white;
-*{
+html, body, div, span, nav, header, iframe,h1, h2, h3, h4, h5, h6, p, section, footer,a, form, address, big, cite, code,del, dfn, em, img, ins, fieldset, q, s,button,svg, samp,small, strike, strong, sub, sup,label, var,b, u, i,input, dl, dt, dd, ol, ul, li,figure,figcaption{
   margin:0;
   padding:0;
   text-decoration:none;
   list-style:none;
-  font-family: ﻿MicrosoftYaHei;
+  font-family: ﻿"MicrosoftYaHei";
+  font-size:14px;
+  color:#333;
+  outline: none;
+  font-weight:normal;
+  font-style:normal;
 }
 //头部
 header{
@@ -36,7 +41,11 @@ header{
   }
   .right{
     margin-right:10%;
+    // width:190px;
+    // height:36px;
     button{
+      // display:flex;
+      // flex-direction: row;
       width:90px;
       height:36px;
       border:1px solid #fe6049;
@@ -115,6 +124,11 @@ section{
         // padding-bottom:-2px;
         border-bottom:2px solid #fe7749;
       }
+    }
+  }
+  @media screen and (max-width: 1220px){
+    .nav{
+      width:1000px;
     }
   }
   .box{
@@ -317,11 +331,65 @@ section{
       }
     }
   }
+  @media screen and (max-width: 1220px){
+    .box{
+      width:1000px;
+    }
+  }
 }
 // <!-- 尾部 -->
 footer{
-  width: 100%;
-  height:280px;
-  background:url(/images/index/footer.jpg);
-  background-size:100% 100%;
+  height:278px;
+  width:100%;
+  background:#333;
+  overflow:hidden;
+  position: relative;
+  .foot{
+    width:1250px;
+    height:100%;
+    margin:0 auto;
+    display:flex;
+    position: relative;
+    div{
+      height:100%;
+      width:20px;
+      flex:1;
+      display:flex;
+      align-items:center;
+      flex-direction:column;
+      i{
+        display:block;
+        margin-top:54px;
+        margin-bottom:20px;
+        width:42px;
+        height:35px;
+      }
+      ul{
+        li{
+          margin-bottom:20px;
+          a{
+            color:#fff;
+          }
+        }
+      }
+    }
+    span{
+      position: absolute;
+      top:220px;
+      left:50%;
+      margin-left:-365px;
+      color:#fff;
+      i{
+        color:#fff;
+        margin-left:20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1250px){
+  footer{
+    .foot{
+      width:950px;
+    }
+  }
 }

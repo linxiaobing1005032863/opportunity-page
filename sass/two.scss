@@ -1,11 +1,16 @@
 $bgColor:#fcf;
 $fontColor:white;
-*{
+html, body, div, span, nav, header, iframe,h1, h2, h3, h4, h5, h6, p, section, footer,a, form, address, big, cite, code,del, dfn, em, img, ins, fieldset, q, s,button,svg, samp,small, strike, strong, sub, sup,label, var,b, u, i,input, dl, dt, dd, ol, ul, li,figure,figcaption{
   margin:0;
   padding:0;
   text-decoration:none;
   list-style:none;
-  font-family: ﻿MicrosoftYaHei;
+  font-family: ﻿"MicrosoftYaHei";
+  font-size:14px;
+  color:#333;
+  outline: none;
+  font-weight:normal;
+  font-style:normal;
 }
 //头部
 header{
@@ -53,6 +58,7 @@ header{
 // <!-- 主要 -->
 section{
   width:100%;
+  overflow:hidden;
   .banner{
     width:100%;
     height:200px;
@@ -116,6 +122,27 @@ section{
           fill:#767a8a;
           margin:0 6px;
         }
+      }
+    }
+  }
+  @media screen and (max-width: 1220px){
+    .nav{
+      .nav-right{
+        margin-right:60px;
+      }
+    }
+  }
+  @media screen and (max-width: 1160px){
+    .nav{
+      .nav-right{
+        margin-right:160px;
+      }
+    }
+  }
+  @media screen and (max-width: 1060px){
+    .nav{
+      .nav-right{
+        margin-right:230px;
       }
     }
   }
@@ -197,6 +224,23 @@ section{
         }
       }
     }
+    @media screen and (max-width: 1220px){
+      .box-left{
+        width:180px;
+        margin-left:120px;
+      }
+    }
+    @media screen and (max-width: 1160px){
+      .box-left{
+        width:180px;
+        margin-left:60px;
+      }
+    }
+    @media screen and (max-width: 1060px){
+      .box-left{
+        margin-left:10px;
+      }
+    }
     // 右边
     .box-right{
       width:970px;
@@ -209,14 +253,15 @@ section{
          border-bottom:1px solid #bcbec9;
          // 右边头部左边
         .box-r-t-left{
-          width:500px;
+          width:52%;
           height:220px;
           background:url(/images/index/two1.png);
           background-size:100% 100%;
+          margin-right:10px;
         }
         // 右边头部右边
         .box-r-t-right{
-          width:470px;
+          width:48%;
           height:100%;
           display:flex;
           justify-content:center;
@@ -229,12 +274,14 @@ section{
             display:flex;
             justify-content:center;
             align-items:center;
-            button{
+            a{
               width:150px;
               height:30px;
               background:#f7882f;
               border:1px solid #fff;
               color:#fff;
+              line-height:30px;
+              text-align:center;
             }
           }
           p{
@@ -242,8 +289,7 @@ section{
             margin-top:20px;
             font-size:16px;
             color:#333;
-          }
-          
+          } 
         }
       }
       
@@ -277,7 +323,9 @@ section{
             .box-r-m2{
               width:260px;
               margin-right:30px;
-              h3{
+              display:flex;
+              flex-direction:column;
+              a{
                 color:#636fe7;
                 font-width:normal;
                 font-size:18px;
@@ -388,12 +436,73 @@ section{
         }
       }
     }
+    @media screen and (max-width: 1220px){
+      .box-right{
+        width:770px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1250px){
+  section{
+    // transform:scale(0.85);
+    // margin-left:-30px;
+    // margin-top:-116px;
   }
 }
 // <!-- 尾部 -->
 footer{
-  width: 100%;
-  height:280px;
-  background:url(/images/index/footer.jpg);
-  background-size:100% 100%;
+  height:278px;
+  width:100%;
+  background:#333;
+  overflow:hidden;
+  position: relative;
+  .foot{
+    width:1250px;
+    height:100%;
+    margin:0 auto;
+    display:flex;
+    position: relative;
+    div{
+      height:100%;
+      width:20px;
+      flex:1;
+      display:flex;
+      align-items:center;
+      flex-direction:column;
+      i{
+        display:block;
+        margin-top:54px;
+        margin-bottom:20px;
+        width:42px;
+        height:35px;
+      }
+      ul{
+        li{
+          margin-bottom:20px;
+          a{
+            color:#fff;
+          }
+        }
+      }
+    }
+    span{
+      position: absolute;
+      top:220px;
+      left:50%;
+      margin-left:-365px;
+      color:#fff;
+      i{
+        color:#fff;
+        margin-left:20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1250px){
+  footer{
+    .foot{
+      width:950px;
+    }
+  }
 }
