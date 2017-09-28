@@ -1,10 +1,16 @@
 $bgColor:#fcf;
 $fontColor:white;
-*{
+html, body, div, span, nav, header, iframe,h1, h2, h3, h4, h5, h6, p, section, footer,a, form, address, big, cite, code,del, dfn, em, img, ins, fieldset, q, s,button,svg, samp,small, strike, strong, sub, sup,label, var,b, u, i,input, dl, dt, dd, ol, ul, li,figure,figcaption{
   margin:0;
   padding:0;
   text-decoration:none;
   list-style:none;
+  font-family: ﻿"MicrosoftYaHei";
+  font-size:14px;
+  color:#333;
+  outline: none;
+  font-weight:normal;
+  font-style:normal;
 }
 //头部
 header{
@@ -18,26 +24,33 @@ header{
     display:flex;
     align-items:center;
     margin-left:10%;
-    font-size:26px;
-    color:#626fe6;
-    font-family:STXinwei;
     i{
       margin-right:16px;
       svg{
         padding-top:10px;
-        fill:#999999;
-        width:26px;
-        height:26px;
+        fill:rgba(153, 153, 153, 1);
+        width:36px;
+        height:36px;
       }
+    }
+    a{
+      color:#626fe6;
+      font-family: ﻿STXinwei;
+      font-size:36px;
     }
   }
   .right{
     margin-right:10%;
+    // width:190px;
+    // height:36px;
     button{
+      // display:flex;
+      // flex-direction: row;
       width:90px;
       height:36px;
       border:1px solid #fe6049;
       background:#fff;
+      border-radius:5px;
       &:nth-child(2){
         border:1px solid red;
         background:#fe6049;
@@ -64,16 +77,34 @@ section{
     justify-content:space-between;
     align-items:center;
     .nav-left{
-      width:266 px;
+      width:266px;
       height:16px;
       a{
-        color:#333;
+        color:#666;
+        font-size: 12px;
+        &:nth-child(2){
+          margin-left:20px;
+        }
+        
       }
-      i{
+      .nav-left1{
+        width:15px;
+        height:15px;
+        position: relative;
         svg{
+          position: absolute;
+          top:6px;
           width:15px;
           height:15px;
           fill:#767a8a;
+          margin-right:6px;
+        }
+      }
+      i{
+        img{
+          width:8px;
+          height:8px;
+          margin:0 6px;
         }
       }
     }
@@ -86,12 +117,18 @@ section{
         color:#333;
         height:100%;
         line-height:98px;
+        font-size:12px;
       }
       .nav-act{
         font-weight:bold;
         // padding-bottom:-2px;
         border-bottom:2px solid #fe7749;
       }
+    }
+  }
+  @media screen and (max-width: 1220px){
+    .nav{
+      width:1000px;
     }
   }
   .box{
@@ -104,9 +141,9 @@ section{
       width:100%;
       height:84px;
       span{
-        font-size:56px;
+        font-size: 72px;
         color:#eee;
-        letter-spacing:6px;
+        letter-spacing:0px;
       }
     }
     //中间
@@ -161,11 +198,13 @@ section{
           text-align:center;
           margin-right:6px;
           margin-top:30px;
-          color:#888;
+          color:#666;
+          font-size:14px;
         }
         .box-b-act{
           border-bottom:2px solid #fe7549;
           color:#333;
+          font-weight:bold;
         }
       }
       //尾部-中间
@@ -178,6 +217,7 @@ section{
           border: solid 1px rgba(205, 207, 221, 1);
           border-right: solid 0px #fff;
           display:flex;
+          font-weight:bold;
           span{
             width:12.5%;
             height:100%;
@@ -247,6 +287,9 @@ section{
           .box-r-b-act{
             background:#5e7be7;
             border:1px solid #5e7be7;
+            a{
+              color:#fff;
+            }
           }
         }
       }
@@ -288,11 +331,65 @@ section{
       }
     }
   }
+  @media screen and (max-width: 1220px){
+    .box{
+      width:1000px;
+    }
+  }
 }
 // <!-- 尾部 -->
 footer{
-  width: 100%;
-  height:280px;
-  background:url(/images/index/footer.jpg);
-  background-size:100% 100%;
+  height:278px;
+  width:100%;
+  background:#333;
+  overflow:hidden;
+  position: relative;
+  .foot{
+    width:1250px;
+    height:100%;
+    margin:0 auto;
+    display:flex;
+    position: relative;
+    div{
+      height:100%;
+      width:20px;
+      flex:1;
+      display:flex;
+      align-items:center;
+      flex-direction:column;
+      i{
+        display:block;
+        margin-top:54px;
+        margin-bottom:20px;
+        width:42px;
+        height:35px;
+      }
+      ul{
+        li{
+          margin-bottom:20px;
+          a{
+            color:#fff;
+          }
+        }
+      }
+    }
+    span{
+      position: absolute;
+      top:220px;
+      left:50%;
+      margin-left:-365px;
+      color:#fff;
+      i{
+        color:#fff;
+        margin-left:20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1250px){
+  footer{
+    .foot{
+      width:950px;
+    }
+  }
 }
